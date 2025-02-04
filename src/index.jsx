@@ -11,7 +11,7 @@ export function App() {
       />
 
       <div class=" m-6 w-full grid border-2 border-white outline-2 outline-white outline-offset-4">
-        <div class="text-center pt-28">
+        <div class="text-center pt-12 sm:pt-28">
           <h1 class="font-louvette relative text-4xl sm:text-6xl font-bold text-white before:content-[''] before:absolute before:left-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-secondary before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-0">
             Valentin Lablanche
           </h1>
@@ -23,6 +23,12 @@ export function App() {
         <div class="text-center h-full place-self-center">
           <h4>Site en cours de création</h4>
         </div>
+
+        <p class="font-dalliance text-center place-self-center">
+          <span>CO</span>
+          <span class="inline-block transform-[scale(-1,1)]">O</span>
+          <span class="inline-block transform-[scale(-1,1)]">C</span>
+        </p>
 
         <a
           href="https://drive.google.com/file/d/1W1MuF_mhwbICo9M9l_9A4mjaM2AmBdjK/view?usp=sharing"
