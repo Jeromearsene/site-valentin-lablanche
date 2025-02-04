@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @font-face {
-	font-family: Tomarik;
-	font-style: normal;
-	font-weight: 200 700;
-	font-display: swap;
-	src: url("/fonts/tomarik/Tomarik-Display.ttf") format("truetype");
-  }
+  font-family: Tomarik;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/tomarik/Tomarik-Display.ttf") format("truetype");
+}
 
 @theme {
-	--font-title: "Tomarik", "sans-serif"; 
-
-	--color-primary: #000000;
-	--color-secondary: #FF0000;
-	--color-custom-white: #F5F1EA;
-  }
+  --font-tomarik: "Tomarik", "sans-serif";
+  --font-louvette: "louvette-banner";
+  --font-articulat: "articulat-cf";
+  --font-dalliance: "dalliance-flourishes";
+  --color-primary: #000000;
+  --color-secondary: #ff0000;
+  --color-custom-white: #f5f1ea;
+}

@@ -4,7 +4,7 @@ import "./style.css";
 
 export function App() {
   return (
-    <div class="h-screen w-screen bg-primary text-white font-title flex">
+    <div class="h-screen w-screen bg-primary text-white font-articulat flex">
       <img
         src="/photo.png"
         class="hover:scale-110 transition saturate-0 hover:saturate-100 hidden sm:block"
@@ -12,10 +12,10 @@ export function App() {
 
       <div class=" m-6 w-full grid border-2 border-white outline-2 outline-white outline-offset-4">
         <div class="text-center pt-28">
-          <h1 class="relative text-4xl sm:text-6xl font-bold text-white before:content-[''] before:absolute before:left-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-secondary before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-0">
+          <h1 class="font-louvette relative text-4xl sm:text-6xl font-bold text-white before:content-[''] before:absolute before:left-1/2 before:bottom-0 before:w-0 before:h-[2px] before:bg-secondary before:transition-all before:duration-300 before:ease-out hover:before:w-full hover:before:left-0">
             Valentin Lablanche
           </h1>
-          <p class="text-xl sm:text-2xl mt-6">
+          <p class="text-xl sm:text-2xl mt-6 font-tomarik">
             Chanteur - Comédien - Acteur voix
           </p>
         </div>
