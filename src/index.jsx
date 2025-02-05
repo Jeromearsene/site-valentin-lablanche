@@ -50,7 +50,7 @@ export function App() {
               width={32}
               class="bg-white p-1 rounded-md"
             />
-            <span>+33 6 12 34 56 78</span>
+            <span>07 70 99 53 94</span>
           </a>
 
           <a
