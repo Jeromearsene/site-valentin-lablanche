@@ -24,7 +24,7 @@ export function Accueil() {
             Présentation
           </a>
           <a
-            href=""
+            href="/portfolio"
             class="font-tomarik rounded-md border-white border gap-2 px-4 py-2 text-center hover:scale-110 transition"
           >
             Portfolio
