@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100"
+    height="100" viewBox="0 0 100 100" xml:space="preserve">
+    <defs>
+    </defs>
+    <g transform="matrix(1 0 0 1 50 50)" id="393f7977-2bf8-45d8-bd4a-94d667c2e3f7">
+        <rect
+            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;"
+            vector-effect="non-scaling-stroke" rx="0" ry="0" width="100" height="100" />
+    </g>
+    <g transform="matrix(Infinity NaN NaN Infinity 0 0)" id="2703766a-4bf0-43aa-8814-a87e4e94877f">
+    </g>
+    <g transform="matrix(1 0 0 1 50 50)" id="f589d6ec-8f44-4877-9253-bd75e963d1a6">
+        <path
+            style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+            vector-effect="non-scaling-stroke" transform=" translate(-40, -48.9)"
+            d="M 0.2 33.1 L 24.4 33.1 L 7.1 16.7 L 16.6 7.1 L 33 23.8 L 33 0 L 47.2 0 L 47.2 23.8 L 63.6 7.1 L 73.1 16.7 L 55.8 33 L 80 33 L 80 46.5 L 55.7 46.5 L 73 63.2 L 63.5 72.60000000000001 L 40 49.1 L 16.5 72.7 L 7 63.2 L 24.3 46.5 L 0 46.5 L 0 33.1 L 0.2 33.1 z M 33.1 65.8 L 47.3 65.8 L 47.3 97.8 L 33.1 97.8 L 33.1 65.8 z"
+            stroke-linecap="round" />
+    </g>
+</svg>
