@@ -51,12 +51,12 @@ export function Header() {
               Portfolio
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
             </a>
-            <a
+            {/* <a
               href="/contact"
               className="bg-secondary hover:bg-red-600 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200"
             >
               Contact
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,13 +96,13 @@ export function Header() {
             >
               Portfolio
             </a>
-            <a
+            {/* <a
               href="/contact"
               className="bg-secondary hover:bg-red-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 text-center mt-2"
               onClick={closeMenu}
             >
               Contact
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>
