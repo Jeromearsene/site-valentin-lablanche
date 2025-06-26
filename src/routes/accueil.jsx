@@ -1,9 +1,13 @@
+import { ResponsiveImage } from "../components/common/responsive-image";
+import { getResponsiveImage } from "../utils/image.utils";
+
 export function Accueil() {
   return (
     <div class="h-screen w-screen bg-primary text-white font-articulat flex">
-      <img
-        src="/photo.png"
-        class="hover:scale-110 transition saturate-0 hover:saturate-100 hidden sm:block"
+      <ResponsiveImage
+        images={getResponsiveImage("photo")}
+        alt="Photo de Valentin Lablanche"
+        className="hover:scale-110 transition saturate-0 hover:saturate-100 hidden sm:block"
       />
 
       <main class=" m-6 w-full grid border-2 border-white outline-2 outline-white outline-offset-4">
@@ -51,7 +55,10 @@ export function Accueil() {
             href="tel:+33770995394"
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img src="/phone.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
+            <img
+              src="/img/svg/phone.svg"
+              class="h-8 w-8 bg-white p-1 rounded-md"
+            />
             <span>07 70 99 53 94</span>
           </a>
 
@@ -59,7 +66,10 @@ export function Accueil() {
             href="mailto:vallabpro@gmail.com"
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img src="/envelope.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
+            <img
+              src="/img/svg/envelope.svg"
+              class="h-8 w-8 bg-white p-1 rounded-md"
+            />
             <span>vallabpro@gmail.com</span>
           </a>
 
@@ -70,7 +80,7 @@ export function Accueil() {
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
             <img
-              src="/instagram-fill.svg"
+              src="/img/svg/instagram-fill.svg"
               class="h-8 w-8 bg-white p-1 rounded-md"
             />
             <span>@supervallab</span>
@@ -82,7 +92,10 @@ export function Accueil() {
             rel="noopener noreferrer"
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img src="/linktree.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
+            <img
+              src="/img/svg/linktree.svg"
+              class="h-8 w-8 bg-white p-1 rounded-md"
+            />
             <span>Linktree</span>
           </a>
         </div>
