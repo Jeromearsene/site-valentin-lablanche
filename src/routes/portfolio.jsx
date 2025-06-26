@@ -1,4 +1,4 @@
-import { useState, useMemo } from "preact/hooks";
+import { useState, useMemo, useEffect, useCallback } from "preact/hooks";
 import { Layout } from "../components/layout";
 import { PORTFOLIO, PORTFOLIO_CATEGORIES } from "../data/portfolio";
 import {
@@ -32,8 +32,6 @@ const CATEGORY_ICONS = {
 
 export function Portfolio() {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  // YouTube iframe cache
-  const [youtubeCache, setYoutubeCache] = useState(new Map());
 
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
@@ -70,13 +68,24 @@ export function Portfolio() {
     );
   };
 
-  const getYouTubeEmbedUrl = (url) => {
+  const getYouTubeEmbedUrl = useCallback((url) => {
     if (!url) return null;
     const videoId = url.match(
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/
     );
     return videoId ? `https://www.youtube.com/embed/${videoId[1]}` : null;
-  };
+  }, []);
+
+  const getYouTubeThumbnailUrl = useCallback(
+    (url) => {
+      const embedUrl = getYouTubeEmbedUrl(url);
+      const videoId = embedUrl?.split("/embed/")[1];
+      return videoId
+        ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+        : null;
+    },
+    [getYouTubeEmbedUrl]
+  );
 
   const isYouTubeUrl = (url) => {
     return url && (url.includes("youtube.com") || url.includes("youtu.be"));
@@ -88,32 +97,23 @@ export function Portfolio() {
     return audioExtensions.some((ext) => url.toLowerCase().includes(ext));
   };
 
-  const createCachedYouTubeEmbed = (url) => {
-    const embedUrl = getYouTubeEmbedUrl(url);
-    if (!embedUrl) return null;
+  // Preload YouTube thumbnails on filter change
+  useEffect(() => {
+    filteredPortfolio.forEach((item) => {
+      const media = item.media;
+      if (isYouTubeUrl(media)) {
+        const thumb = getYouTubeThumbnailUrl(media);
+        if (thumb) {
+          const img = new Image();
+          img.src = thumb;
+        }
+      }
+    });
+  }, [filteredPortfolio, getYouTubeThumbnailUrl]);
 
-    if (youtubeCache.has(embedUrl)) {
-      return youtubeCache.get(embedUrl);
-    }
+  function MediaPreview({ media }) {
+    const [showIframe, setShowIframe] = useState(false);
 
-    const iframe = (
-      <div className="aspect-video" key={embedUrl}>
-        <iframe
-          src={embedUrl}
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full"
-        />
-      </div>
-    );
-
-    setYoutubeCache((prev) => new Map(prev.set(embedUrl, iframe)));
-
-    return iframe;
-  };
-
-  const renderMediaPreview = (media) => {
     if (!media) {
       return (
         <div className="aspect-video bg-gradient-to-br from-custom-white to-gray-100 flex items-center justify-center">
@@ -126,16 +126,35 @@ export function Portfolio() {
     }
 
     if (isYouTubeUrl(media)) {
-      const cachedEmbed = createCachedYouTubeEmbed(media);
-      return (
-        cachedEmbed || (
-          <div className="aspect-video bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
-            <div className="text-center">
-              <Play className="w-12 h-12 text-red-400 mx-auto mb-2" />
-              <span className="text-sm text-red-500">Vidéo YouTube</span>
-            </div>
+      const embedUrl = getYouTubeEmbedUrl(media);
+      const thumbnailUrl = getYouTubeThumbnailUrl(media);
+
+      return showIframe ? (
+        <div className="aspect-video" key={embedUrl}>
+          <iframe
+            src={`${embedUrl}?autoplay=1`} // autoplay added here
+            title="YouTube video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      ) : (
+        <div
+          className="aspect-video relative cursor-pointer group"
+          onClick={() => setShowIframe(true)}
+          key={`thumb-${embedUrl}`}
+        >
+          <img
+            src={thumbnailUrl}
+            alt="YouTube thumbnail"
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/60 transition-colors">
+            <Play className="w-12 h-12 text-white" />
           </div>
-        )
+        </div>
       );
     }
 
@@ -151,7 +170,6 @@ export function Portfolio() {
       );
     }
 
-    // Pour les autres types de médias
     return (
       <div className="aspect-video bg-gradient-to-br from-custom-white to-gray-100 flex items-center justify-center">
         <div className="text-center">
@@ -160,9 +178,8 @@ export function Portfolio() {
         </div>
       </div>
     );
-  };
+  }
 
-  // Save portfolio to skip new calcul
   const sortedPortfolio = useMemo(() => {
     return filteredPortfolio.sort(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -196,10 +213,10 @@ export function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedPortfolio.map((item, index) => (
               <Card
-                key={`${item.title}-${index}`} /* Clé plus stable */
+                key={`${item.title}-${index}`}
                 formatDate={formatDate}
                 getCategoryIcon={getCategoryIcon}
-                renderMediaPreview={renderMediaPreview}
+                renderMediaPreview={(media) => <MediaPreview media={media} />}
                 item={item}
               />
             ))}
