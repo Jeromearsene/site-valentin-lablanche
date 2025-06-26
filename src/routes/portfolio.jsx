@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useState, useMemo } from "preact/hooks";
 import { Layout } from "../components/layout";
 import { PORTFOLIO, PORTFOLIO_CATEGORIES } from "../data/portfolio";
 import { Play, Mic, Volume2, Tv } from "lucide-react";
@@ -12,6 +12,8 @@ const CATEGORY_ICONS = {
 
 export function Portfolio() {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  // YouTube iframe cache
+  const [youtubeCache, setYoutubeCache] = useState(new Map());
 
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
@@ -66,6 +68,31 @@ export function Portfolio() {
     return audioExtensions.some((ext) => url.toLowerCase().includes(ext));
   };
 
+  const createCachedYouTubeEmbed = (url) => {
+    const embedUrl = getYouTubeEmbedUrl(url);
+    if (!embedUrl) return null;
+
+    if (youtubeCache.has(embedUrl)) {
+      return youtubeCache.get(embedUrl);
+    }
+
+    const iframe = (
+      <div className="aspect-video" key={embedUrl}>
+        <iframe
+          src={embedUrl}
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
+    );
+
+    setYoutubeCache((prev) => new Map(prev.set(embedUrl, iframe)));
+
+    return iframe;
+  };
+
   const renderMediaPreview = (media) => {
     if (!media) {
       return (
@@ -79,25 +106,16 @@ export function Portfolio() {
     }
 
     if (isYouTubeUrl(media)) {
-      const embedUrl = getYouTubeEmbedUrl(media);
-      return embedUrl ? (
-        <div className="aspect-video">
-          <iframe
-            src={embedUrl}
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        </div>
-      ) : (
-        <div className="aspect-video bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
-          <div className="text-center">
-            <Play className="w-12 h-12 text-red-400 mx-auto mb-2" />
-            <span className="text-sm text-red-500">Vidéo YouTube</span>
+      const cachedEmbed = createCachedYouTubeEmbed(media);
+      return (
+        cachedEmbed || (
+          <div className="aspect-video bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
+            <div className="text-center">
+              <Play className="w-12 h-12 text-red-400 mx-auto mb-2" />
+              <span className="text-sm text-red-500">Vidéo YouTube</span>
+            </div>
           </div>
-        </div>
+        )
       );
     }
 
@@ -124,6 +142,13 @@ export function Portfolio() {
     );
   };
 
+  // Save portfolio to skip new calcul
+  const sortedPortfolio = useMemo(() => {
+    return filteredPortfolio.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  }, [filteredPortfolio]);
+
   return (
     <Layout>
       <div className="min-h-screen bg-custom-white font-articulat">
@@ -149,20 +174,15 @@ export function Portfolio() {
 
           {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPortfolio
-              .sort(
-                (a, b) =>
-                  new Date(b.date).getTime() - new Date(a.date).getTime()
-              )
-              .map((item, index) => (
-                <Card
-                  key={index}
-                  formatDate={formatDate}
-                  getCategoryIcon={getCategoryIcon}
-                  renderMediaPreview={renderMediaPreview}
-                  item={item}
-                />
-              ))}
+            {sortedPortfolio.map((item, index) => (
+              <Card
+                key={`${item.title}-${index}`} /* Clé plus stable */
+                formatDate={formatDate}
+                getCategoryIcon={getCategoryIcon}
+                renderMediaPreview={renderMediaPreview}
+                item={item}
+              />
+            ))}
           </div>
 
           {/* Empty state */}
