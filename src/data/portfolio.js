@@ -20,7 +20,7 @@ export const PORTFOLIO = [
     title: "Chorale - Requiem de mozart au festival de Toulouse",
     description:
       "Interprétation chorale avec le chœur toulousain Nota Bene au Théâtre de la Cité, pour le Requiem de Mozart alliant intensité et précision musicale.",
-    media: "https://youtube.com/shorts/bKPUfDtJ5Wk?feature=share",
+    media: "https://youtube.com/shorts/bKPUfDtJ5Wk",
     date: new Date(2025, 7, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
