@@ -26,12 +26,6 @@ export const PORTFOLIO = [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
     ],
-    customer: {
-      name: "Oscar Fedal",
-      comment: "Tu as fait un incroyable boulot c’est vraiment génial!",
-      logo: "oscar_fedal",
-    },
-    social: "https://www.oscarfedal.com/",
   },
   {
     title: "Nouvelle Audio - Fausse Note",
