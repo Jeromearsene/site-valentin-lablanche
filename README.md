@@ -17,3 +17,22 @@
 ## Déploiement
 
 - Avec [Vercel](https://vercel.com/jeromearsenes-projects/site-valentin-lablanche), dès qu'un push à lieu sur la branche `main`, le site est automatiquement redéployé.
+
+## Pull request
+
+1. Créer une branche à partir de la branche nommée `prod`:
+
+    ```bash
+    git branche [nom branche] -b
+    ```
+
+    `-b` est pour basculer directement sur cette branche.
+
+2. Effectuer ses changements.
+3. Les pousser:
+
+    ```bash
+    git push origin [nom branche]
+   ```
+
+4. Créer la pull request depuis Github: `Pull requests` > `New pull request`. La faire pointer vers la branche de `prod`.
