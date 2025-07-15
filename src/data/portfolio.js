@@ -17,6 +17,23 @@ export const PORTFOLIO_CATEGORIES = {
 
 export const PORTFOLIO = [
   {
+    title: "Chorale - Requiem de mozart au festival de Toulouse",
+    description:
+      "Interprétation chorale avec le chœur toulousain Nota Bene au Théâtre de la Cité, pour le Requiem de Mozart alliant intensité et précision musicale.",
+    media: "https://youtube.com/shorts/bKPUfDtJ5Wk?feature=share",
+    date: new Date(2025, 7, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+    customer: {
+      name: "Oscar Fedal",
+      comment: "Tu as fait un incroyable boulot c’est vraiment génial!",
+      logo: "oscar_fedal",
+    },
+    social: "https://www.oscarfedal.com/",
+  },
+  {
     title: "Nouvelle Audio - Fausse Note",
     description:
       "Narration complète d'une nouvelle Thriller/Polar avec différentes voix de personnages. Travail sur l'intonation et le rythme pour maintenir l'engagement de l'auditeur.",
