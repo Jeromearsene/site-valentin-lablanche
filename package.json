@@ -13,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/vite": "^4.1.10",
+    "@vercel/analytics": "^1.5.0",
     "lucide-react": "^0.518.0",
     "preact": "^10.25.4",
     "preact-iso": "^2.9.2",
