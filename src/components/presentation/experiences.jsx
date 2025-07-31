@@ -9,37 +9,47 @@ export function Experiences() {
     },
     {
       date: new Date(2025, 7, 0),
-      title: "Stage cours Florent",
+      title: "Stage cours Florent 2",
       description: "Ateliers pratiques...",
     },
   ];
 
   return (
-    <section class="py-16">
-      <div className="grid grid-cols-2 gap-6 items-stretch max-w-7xl mx-auto">
-        <section className="bg-white pr-4 flex flex-col items-end h-full">
-          {experiences.map(({ date, title }) => (
-            <div className="inline-flex items-center" key={title}>
-              <p>{formatDate(date)}</p>
-              <div className="relative -right-6 bg-primary overflow-visible py-12">
-                {/* <span className="block w-2 text-5xl text-center relative text-primary -left-2.5">
-                    ●
-                  </span> */}
-                <span className="block w-2.5 text-3xl text-center relative text-primary -left-2.5">
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-primary mb-4 font-tomarik">
+            Expériences
+          </h2>
+          <div className="w-16 h-1 bg-secondary mx-auto" />
+        </div>
+
+        <div className="grid grid-cols-[1fr_0.5rem_1fr] gap-12 items-stretch">
+          <section className="bg-white pr-4 flex flex-col justify-around items-end h-full py-16 gap-14">
+            {experiences.map(({ date, title }) => (
+              <div className="inline-flex items-center" key={title}>
+                <p>{formatDate(date)}</p>
+              </div>
+            ))}
+          </section>
+          <section class="bg-primary h-auto flex flex-col justify-around py-16 gap-14">
+            {experiences.map((_, index) => (
+              <div key={index}>
+                <span className="block w-8 text-3xl text-center relative text-primary -left-3 ">
                   ◉
                 </span>
               </div>
-            </div>
-          ))}
-        </section>
-        <section className="bg-white pl-4 h-full flex flex-col justify-around">
-          {experiences.map(({ title, description }) => (
-            <div key={title}>
-              <h2 class="text-xl font-bold font-articulat">{title}</h2>
-              <p class="italic">{description}</p>
-            </div>
-          ))}
-        </section>
+            ))}
+          </section>
+          <section className="bg-white pl-4 h-full flex flex-col justify-around py-16 gap-14">
+            {experiences.map(({ title, description }) => (
+              <div key={title}>
+                <h2 class="text-xl font-bold font-articulat">{title}</h2>
+                <p class="italic">{description}</p>
+              </div>
+            ))}
+          </section>
+        </div>
       </div>
     </section>
   );
