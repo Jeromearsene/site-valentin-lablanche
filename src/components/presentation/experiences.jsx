@@ -16,7 +16,7 @@ export function Experiences() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4 font-tomarik">
             Expériences
@@ -24,32 +24,31 @@ export function Experiences() {
           <div className="w-16 h-1 bg-secondary mx-auto" />
         </div>
 
-        <div className="grid grid-cols-[1fr_0.5rem_1fr] gap-12 items-stretch">
-          <section className="bg-white pr-4 flex flex-col justify-around items-end h-full py-16 gap-14">
-            {experiences.map(({ date, title }) => (
-              <div className="inline-flex items-center" key={title}>
+        {experiences.map(({ date, title, description }, index) => (
+          <div
+            key={index}
+            className="grid grid-cols-[1fr_0.5rem_1fr] items-stretch group hover:bg-opacity-50 transition-colors duration-300"
+          >
+            <section className="bg-white pr-8 sm:pr-12 flex flex-col justify-around items-end py-16 group-hover:bg-custom-white transition-colors duration-300">
+              <div className="inline-flex items-center group-hover:scale-110 group-hover:font-bold transition">
                 <p>{formatDate(date)}</p>
               </div>
-            ))}
-          </section>
-          <section class="bg-primary h-auto flex flex-col justify-around py-16 gap-14">
-            {experiences.map((_, index) => (
-              <div key={index}>
-                <span className="block w-8 text-3xl text-center relative text-primary -left-3 ">
-                  ◉
-                </span>
-              </div>
-            ))}
-          </section>
-          <section className="bg-white pl-4 h-full flex flex-col justify-around py-16 gap-14">
-            {experiences.map(({ title, description }) => (
-              <div key={title}>
-                <h2 class="text-xl font-bold font-articulat">{title}</h2>
-                <p class="italic">{description}</p>
-              </div>
-            ))}
-          </section>
-        </div>
+            </section>
+
+            <section className="bg-primary flex flex-col justify-around py-16 transition-colors duration-300">
+              <span className="block w-8 text-3xl group-hover:scale-125 transition text-center relative text-primary -left-3">
+                ◉
+              </span>
+            </section>
+
+            <section className="bg-white pl-8 sm:pl-12 flex flex-col justify-around py-16 group-hover:bg-custom-white transition-colors duration-300">
+              <h2 className="text-xl font-bold font-articulat group-hover:text-secondary group-hover:scale-105 transition">
+                {title}
+              </h2>
+              <p className="italic">{description}</p>
+            </section>
+          </div>
+        ))}
       </div>
     </section>
   );
