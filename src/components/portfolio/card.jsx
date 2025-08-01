@@ -1,13 +1,9 @@
 import { Calendar, Quote } from "lucide-react";
 import { ResponsiveImage } from "../common/responsive-image";
 import { getResponsiveImage } from "../../utils/image.utils";
+import { formatDate } from "../../utils/date.utils";
 
-export function Card({
-  item,
-  renderMediaPreview,
-  getCategoryIcon,
-  formatDate,
-}) {
+export function Card({ item, renderMediaPreview, getCategoryIcon }) {
   return (
     <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
       {/* Media Preview */}
