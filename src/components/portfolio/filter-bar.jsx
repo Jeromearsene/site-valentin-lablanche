@@ -27,6 +27,8 @@ export function FilterBar({
           {categories.map((category) => (
             <button
               key={category}
+              data-rybbit-event="portfolio-filter-click"
+              data-rybbit-prop-category={category}
               onClick={() => toggleFunction(category)}
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2 whitespace-nowrap flex-shrink-0 ${
                 selectedCategories.includes(category)
