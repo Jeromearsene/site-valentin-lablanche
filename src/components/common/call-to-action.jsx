@@ -15,7 +15,7 @@ export function CallToAction() {
           Contactez-moi pour discuter de votre projet et découvrir comment ma
           voix peut le sublimer.
         </p>
-        <div class="flex text-white justify-between text-xl">
+        <div class="flex flex-col sm:flex-row gap-4 text-white justify-between text-xl">
           <a
             href={`tel:${phoneInternationalization(PHONE)}`}
             class="flex items-center justify-center gap-2 hover:text-secondary transition-colors group"
