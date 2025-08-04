@@ -11,7 +11,7 @@ export function Card({
   return (
     <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
       {/* Media Preview */}
-      {renderMediaPreview(item.media)}
+      {renderMediaPreview(item)}
 
       <div className="p-6">
         {/* Categories */}
@@ -43,7 +43,6 @@ export function Card({
           {formatDate(item.date)}
         </div>
 
-        {/* Customer Info */}
         {item.customer && (
           <div>
             <div class="flex items-center group-hover:text-secondary mb-3">
