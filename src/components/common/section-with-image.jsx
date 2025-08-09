@@ -18,7 +18,8 @@ export const SectionWithImage = ({
         const minHeight = 300;
         const finalHeight = Math.max(contentHeight, minHeight);
 
-        imageRef.current.style.height = `${finalHeight}px`;
+        const maxHeight = window.innerHeight * 0.7;
+        imageRef.current.style.height = `${Math.min(finalHeight, maxHeight)}px`;
       }
     };
 
@@ -41,7 +42,7 @@ export const SectionWithImage = ({
     <section className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start group ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center group ${
             imageLeft ? "lg:grid-flow-col" : ""
           }`}
         >
