@@ -36,6 +36,8 @@ export function Presentation() {
           <APropos />
         </SectionWithImage>
 
+        <CallToAction />
+
         <SectionWithImage
           imageLeft={false}
           imageSrc={getResponsiveImage("photo-presentation-2")}
