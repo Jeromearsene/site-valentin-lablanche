@@ -66,7 +66,7 @@ export function Presentation() {
           <Techniques />
         </SectionWithImage>
 
-        <Experiences />
+        {/* <Experiences /> */}
 
         <CallToAction />
       </div>
