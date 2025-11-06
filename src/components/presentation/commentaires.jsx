@@ -49,8 +49,8 @@ export default function Commentaires() {
         class="container p-6 mx-auto h-48 rounded-lg border border-secondary"
         aria-live="polite"
       >
-        <div class="flex gap-3 items-start">
-          <div class="flex-1">
+        <div class="flex gap-3 items-start h-full">
+          <div class="flex-1 overflow-y-auto h-full">
             <p>
               “<span class="italic">{item.comment}</span>”
             </p>
