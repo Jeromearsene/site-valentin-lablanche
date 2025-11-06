@@ -8,6 +8,7 @@ import { getResponsiveImage } from "../utils/image.utils";
 import { SectionWithImage } from "../components/common/section-with-image";
 import { CallToAction } from "../components/common/call-to-action";
 import { Experiences } from "../components/presentation/experiences";
+import Commentaires from "../components/presentation/commentaires";
 
 export function Presentation() {
   return (
@@ -47,6 +48,8 @@ export function Presentation() {
         >
           <Forces />
         </SectionWithImage>
+
+        <Commentaires />
 
         <SectionWithImage
           imageLeft={true}
