@@ -24,6 +24,15 @@ export function App() {
           <h4>Site en cours de création</h4>
         </div>
 
+        <a
+          href="https://drive.google.com/file/d/1W1MuF_mhwbICo9M9l_9A4mjaM2AmBdjK/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-tomarik place-self-center rounded-md border-dance gap-2 px-4 py-2 text-center hover:scale-110 transition"
+        >
+          📄 Télécharger mon CV
+        </a>
+
         <div class="flex justify-around flex-wrap gap-4 h-fit place-self-end w-full mb-8">
           <a
             href="tel:+33770995394"
