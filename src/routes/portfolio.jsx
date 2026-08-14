@@ -82,13 +82,6 @@ export function Portfolio() {
     });
   }, [selectedProjectTypes, selectedVocalStyles]);
 
-  const formatDate = (date) => {
-    return date.toLocaleDateString("fr-FR", {
-      year: "numeric",
-      month: "long",
-    });
-  };
-
   const getCategoryIcon = (category) => {
     const IconComponent = CATEGORY_ICONS[category];
     return IconComponent ? (
@@ -271,7 +264,6 @@ export function Portfolio() {
             {sortedPortfolio.map((item, index) => (
               <Card
                 key={`${item.title}-${index}`}
-                formatDate={formatDate}
                 getCategoryIcon={getCategoryIcon}
                 renderMediaPreview={(media) => <MediaPreview media={media} />}
                 item={item}
