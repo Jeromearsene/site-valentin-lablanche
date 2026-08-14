@@ -46,7 +46,7 @@ export function Presentation() {
 
         <SectionWithImage
           imageLeft={true}
-          imageSrc={getResponsiveImage("photo-presentation-6")}
+          imageSrc={getResponsiveImage("photo-presentation-13")}
           imageAlt="Photo présentation - Compétences"
           className="bg-white"
         >
