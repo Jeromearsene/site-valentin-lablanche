@@ -3,11 +3,14 @@ import { User, Mic, Music, Gamepad2 } from "lucide-react";
 export function Competences() {
   const competences = [
     {
-      title: "Doublage",
+      title: "Voix",
       items: [
-        "Doublage voix off (Bubble Flat, 2019)",
-        "Doublage bande rythmo (Chaîne Youtube & réseaux sociaux, en cours)",
-        "Projets Fiverr Jeu vidéo",
+        "Livre audio (Oscar Fedal, 2025)",
+        "Doublage (Octobre 2024)",
+        "Narrateur et voix off dans une web série (2025)",
+        "Voix institutionnelle",
+        "Voix Pédagogique",
+        "E-learning et cours de français",
       ],
     },
     {
