@@ -4,6 +4,8 @@ import { Competences } from "../components/presentation/competences";
 import { Forces } from "../components/presentation/forces";
 import { Techniques } from "../components/presentation/techniques";
 import { Mic } from "lucide-react";
+import { getResponsiveImage } from "../utils/image.utils";
+import { SectionWithImage } from "../components/common/section-with-image";
 
 export function Presentation() {
   return (
@@ -24,10 +26,41 @@ export function Presentation() {
           </div>
         </section>
 
-        <APropos />
-        <Forces />
-        <Competences />
-        <Techniques />
+        <SectionWithImage
+          imageLeft={true}
+          imageSrc={getResponsiveImage("photo-presentation-11")}
+          imageAlt="Photo présentation - À propos"
+          className="bg-white"
+        >
+          <APropos />
+        </SectionWithImage>
+
+        <SectionWithImage
+          imageLeft={false}
+          imageSrc={getResponsiveImage("photo-presentation-2")}
+          imageAlt="Photo présentation - Forces"
+          className="bg-gray-50"
+        >
+          <Forces />
+        </SectionWithImage>
+
+        <SectionWithImage
+          imageLeft={true}
+          imageSrc={getResponsiveImage("photo-presentation-6")}
+          imageAlt="Photo présentation - Compétences"
+          className="bg-white"
+        >
+          <Competences />
+        </SectionWithImage>
+
+        <SectionWithImage
+          imageLeft={false}
+          imageSrc={getResponsiveImage("photo-presentation-12")}
+          imageAlt="Photo présentation - Techniques"
+          className="bg-gray-50"
+        >
+          <Techniques />
+        </SectionWithImage>
 
         {/* Call to Action */}
         {/* <section className="bg-primary py-16">
