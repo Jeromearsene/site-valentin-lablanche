@@ -1,4 +1,4 @@
-import { Calendar, User, Quote } from "lucide-react";
+import { Calendar, Quote } from "lucide-react";
 import { ResponsiveImage } from "../common/responsive-image";
 import { getResponsiveImage } from "../../utils/image.utils";
 
@@ -46,7 +46,7 @@ export function Card({
         {/* Customer Info */}
         {item.customer && (
           <div className="border-t border-gray-100 pt-4">
-            <div className="flex items-start gap-3">
+            <div className="flex flex-row-reverse items-start gap-3">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 {item.customer.logo ? (
                   <ResponsiveImage
@@ -54,7 +54,9 @@ export function Card({
                     alt={`Logo de ${item.customer.name}`}
                   />
                 ) : (
-                  <User className="w-4 h-4 text-white" />
+                  <span className="text-white font-semibold text-lg">
+                    {item.customer.name.charAt(0).toUpperCase()}
+                  </span>
                 )}
               </div>
               <div className="flex-1">
