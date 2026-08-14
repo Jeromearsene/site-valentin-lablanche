@@ -3,7 +3,10 @@ import { Settings } from "lucide-react";
 export function Techniques() {
   const techniques = [
     { icon: Settings, text: "Création de bande rythmo (logiciel Cappela)" },
-    { icon: Settings, text: "Montage (Première Pro)" },
+    {
+      icon: Settings,
+      text: "Traitement Audio, Design et Montage (Suite Adobe)",
+    },
     { icon: Settings, text: "Gestion de projet (Notion, Confluence, etc...)" },
   ];
 
