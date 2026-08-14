@@ -3,13 +3,11 @@ import { User, Mic, Music, Gamepad2 } from "lucide-react";
 export function Competences() {
   const competences = [
     {
-      title: "Interprétation scénique",
+      title: "Doublage",
       items: [
-        "Soliste lors de spectacles",
-        "Scènes ouvertes",
-        "Spectacle de chansons françaises",
-        'Prix de composition/interprétation (Festival "La bastide qui chante", Castillonnès 2012)',
-        "Théâtre + théâtre d'impro (compagnie de théâtre)",
+        "Doublage voix off (Bubble Flat, 2019)",
+        "Doublage bande rythmo (Chaîne Youtube & réseaux sociaux, en cours)",
+        "Projets Fiverr Jeu vidéo",
       ],
     },
     {
@@ -22,11 +20,13 @@ export function Competences() {
       ],
     },
     {
-      title: "Doublage",
+      title: "Interprétation scénique",
       items: [
-        "Doublage voix off (Bubble Flat, 2019)",
-        "Doublage bande rythmo (Chaîne Youtube & réseaux sociaux, en cours)",
-        "Projets Fiverr Jeu vidéo",
+        "Soliste lors de spectacles",
+        "Scènes ouvertes",
+        "Spectacle de chansons françaises",
+        'Prix de composition/interprétation (Festival "La bastide qui chante", Castillonnès 2012)',
+        "Théâtre + théâtre d'impro (compagnie de théâtre)",
       ],
     },
     {
