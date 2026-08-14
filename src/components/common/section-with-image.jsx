@@ -38,10 +38,10 @@ export const SectionWithImage = ({
   }, []);
 
   return (
-    <section className={`py-16 ${className} group`}>
+    <section className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start group ${
             imageLeft ? "lg:grid-flow-col" : ""
           }`}
         >
@@ -53,7 +53,7 @@ export const SectionWithImage = ({
               <ResponsiveImage
                 images={imageSrc}
                 alt={imageAlt}
-                className="w-full h-full object-cover rounded-lg shadow-lg group-hover:scale-125 transition"
+                className="w-full h-full object-cover rounded-lg shadow-lg group-hover:scale-125 transition duration-300"
               />
             </div>
           </div>
