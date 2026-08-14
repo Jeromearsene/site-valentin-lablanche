@@ -7,6 +7,9 @@ export const PORTFOLIO_CATEGORIES = {
     VOIXOFF: "Voix off",
     PERSO: "Réalisation personnelle",
     DEMO: "Bande Demo",
+    JEUXVIDEO: "Jeux vidéo",
+    SCENE: "Scène",
+    DIRECTION: "Direction d'acteur",
   },
   VOCAL_STYLES: {
     JOUE: "Joué",
@@ -352,5 +355,387 @@ export const PORTFOLIO = [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
     ],
+  },
+  {
+    title: "Voix off narrative – Vidéo Instagram",
+    description:
+      "Voix off grave et profonde pour une vidéo narrative au format court, inspirée des narrations feuilletonnantes à la Desperate Housewives et du timbre velouté de Benoît Allemane.",
+    media: "https://youtu.be/XLtM7vhjOAI",
+    date: new Date(2025, 6, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Audrey Lisador",
+      comment:
+        "Bienveillant, à l'écoute et une communication parfaite sur le projet ! Le résultat de son travail est à la hauteur de ce que j'attendais pour mes vidéos. Je recommande fortement, Encore un grand merci",
+    },
+  },
+  {
+    title: "Voix institutionnelle – Cadre légal d'un médicament",
+    description:
+      "Voix claire et posée pour une vidéo interne détaillant le cadre légal d'un médicament et ses indications, avec un ton neutre et précis au service d'une information rigoureuse.",
+    media: "img/bright",
+    date: new Date(2025, 7, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
+    customer: {
+      name: "BRIGHT",
+      comment: null,
+    },
+  },
+  {
+    title: "Livre audio – Les Infidèles (Théo Mercier 2)",
+    description:
+      "Narration incarnée et rythmée pour la suite des enquêtes d'un policier racontant ses déboires, avec un travail sur les voix de personnages et le ton du récit pour maintenir l'engagement de l'auditeur.",
+    media: "https://youtu.be/u9axnEupDH0",
+    date: new Date(2025, 8, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Oscar Fedal",
+      comment: null,
+      logo: "oscar_fedal",
+    },
+  },
+  {
+    title: "Voix off – Habillage d'album",
+    description:
+      "Voix chaude et complice pour l'habillage d'un album, dans le registre assumé des voix off de comédies romantiques classiques, jouant du cliché avec un second degré maîtrisé.",
+    media: "https://www.youtube.com/watch?v=CYMJzHEwwo0",
+    date: new Date(2025, 8, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Adam Vercamer",
+      comment: null,
+    },
+  },
+  {
+    title: "Voix off – Escape Game (Génie & Vizir)",
+    description:
+      "Double interprétation pour l'habillage sonore d'un escape game, entre un génie survolté et facétieux et un vizir grave et machiavélique, avec un jeu expressif au service de l'immersion des joueurs.",
+    media: "https://youtu.be/NpwNcPp08-E",
+    date: new Date(2025, 10, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Zone 15",
+      comment: null,
+    },
+  },
+  {
+    title: "Jeu vidéo – PNJ de Faehnor Online",
+    description:
+      "Interprétation de deux PNJ de quête pour le jeu vidéo Faehnor Online, entre un corsaire jovial et haut en couleur et un chef de garde sous-marin blasé, avec un contraste de timbres au service de chaque personnage.",
+    media: "https://youtu.be/6S4DXMVi7dA",
+    date: new Date(2025, 10, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.JEUXVIDEO,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Faehnor Online",
+      comment: null,
+    },
+  },
+  {
+    title: "Chorale – Čiurlionis, Projet Jura",
+    description:
+      "Interprétation en pupitre ténor autour des œuvres de Čiurlionis pour le Projet Jura, avec l'Ensemble Vocal Nota Bene dirigé par Delphine Armand et le CRR de Toulouse sous la direction de Rolandas Muleika, à la découverte d'un répertoire rare.",
+    media: "img/nota_bene_jura",
+    date: new Date(2025, 11, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+  },
+  {
+    title: "Chorale – Messa di Gloria de Puccini",
+    description:
+      "Interprétation en pupitre ténor de la Messa di Gloria de Puccini avec l'Ensemble Vocal Nota Bene et l'Orchestre de Chambre de Toulouse, sous la direction d'Edwin Crossley-Mercer, dans le cadre d'un concert de noel pour Castel Artes.",
+    media: "img/nota_bene_messa_di_gloria",
+    date: new Date(2025, 12, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+  },
+  {
+    title: "Voix off narrative – Publicité de livre",
+    description:
+      "Interprétation d'un personnage et création d'ambiance pour la publicité d'un livre, avec un traitement volontairement dégradé (micro bas de gamme, écho et réverbération) au service de l'immersion du spectateur.",
+    media: "https://youtu.be/EKeZEihjGHE",
+    date: new Date(2025, 12, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "thomasrecher",
+      comment:
+        "Excellente collaboration. Valentin est très à l’écoute, force de proposition et d’une grande justesse dans l’interprétation. Le travail est soigné, de qualité, et les ajustements sont compris et intégrés avec beaucoup de professionnalisme. Je recommande sans hésiter.",
+    },
+  },
+  {
+    title: "Voix off YouTube – Anecdotes Naruto",
+    description:
+      "Narration rythmée et complice pour une vidéo YouTube consacrée aux anecdotes autour de Naruto, avec un phrasé dynamique et des relances d'énergie pour capter l'attention du spectateur et la maintenir.",
+    media: "https://www.youtube.com/watch?v=4BYRQRsV3cM",
+    date: new Date(2026, 2, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Mélio",
+      comment: null,
+    },
+  },
+  {
+    title: "Voix off & chant – Spectacle cosplay (Lucifer)",
+    description:
+      "Interprétation du personnage de Lucifer, entre jeu parlé et partie chantée, pour la bande son d'un spectacle de cosplay, avec un timbre théâtral au service de la présence scénique.",
+    media: "https://youtu.be/pL94XeMt6Bs",
+    date: new Date(2026, 2, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+    customer: {
+      name: "Elea Jeannot",
+      comment: null,
+    },
+  },
+  {
+    title: "Chorale – Gloria de Poulenc",
+    description:
+      "Interprétation en pupitre ténor du Gloria de Poulenc avec l'Ensemble Vocal Nota Bene et Les Conférences Vocales, accompagnés par l'orchestre Toulouse Pink Octopus, sous la direction de Jean-Guy Olive.",
+    media: "img/note_bene_gloria",
+    date: new Date(2026, 3, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+  },
+  {
+    title: "Doublage – Personnage secondaire (dessin animé Spider-Man)",
+    description:
+      "Interprétation d'un personnage secondaire pour un dessin animé Spider-Man réalisé par Licarion. Projet actuellement en cours de production.",
+    media: "img/licarion",
+    date: new Date(2026, 4, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Licarion",
+      comment: null,
+    },
+  },
+  {
+    title: "Voix off YouTube – Personnage Pokémon",
+    description:
+      "Interprétation d'un personnage secondaire de l'univers Pokémon pour une vidéo produite par Nionx sur YouTube, avec un jeu teinté d'humour (projet actuellement en cours de production).",
+    media: "img/nionx",
+    date: new Date(2026, 4, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Nionx",
+      comment: null,
+    },
+  },
+  {
+    title: "Chorale – Stabat Mater de Dvořák",
+    description:
+      "Interprétation en pupitre ténor du Stabat Mater de Dvořák à la Halle aux Grains, avec l'Ensemble Vocal Nota Bene et l'ensemble de chœur du Conservatoire de Toulouse, sous la direction de Christophe Millet.",
+    media: "https://www.youtube.com/watch?v=YS_iGWai2-E",
+    date: new Date(2026, 4, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+  },
+  {
+    title: "Jeu vidéo – Voix de créature (mod Skyrim)",
+    description:
+      "Interprétation d'une voix de créature pour un mod dédié de Skyrim, traduit et produit par La Confrérie des Traducteurs, avec un travail de texture vocale au service de l'immersion dans l'univers du jeu.",
+    media: "https://youtu.be/d03ygjI3s-g",
+    date: new Date(2026, 4, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.JEUXVIDEO,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "La Confrérie des Traducteurs",
+      comment: null,
+    },
+  },
+  {
+    title: "Jeu vidéo – Nocturne For Cyl-hestia",
+    description:
+      "Interprétation d'un personnage pour le jeu Nocturne For Cyl-hestia, avec une voix grave et gutturale pour le chef de la garde, main droite du dictateur en place, au service d'une présence menaçante.",
+    media: "https://youtu.be/DrVwwNk7JfQ",
+    date: new Date(2026, 4, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.JEUXVIDEO,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Spore & Sorcery",
+      comment: null,
+    },
+  },
+  {
+    title: "Chorale – A Painted Symphony (Clair Obscur : Expedition 33)",
+    description:
+      "Interprétation en pupitre ténor sur les dates de Toulouse et Carcassonne de la tournée A Painted Symphony, autour de Clair Obscur : Expedition 33, avec l'Ensemble Vocal Nota Bene et L'Orchestre Curieux dirigé par Daniel Sicard, aux côtés de Lorien Testard et Alice Duport-Percier, dans une production Bleu Citron et Sandfall Interactive.",
+    media: "img/nota_bene_clair_obscur",
+    date: new Date(2026, 5, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+    ],
+  },
+  {
+    title: "Publicité – Rodenstock",
+    description:
+      "Voix claire et posée pour la publicité d'un nouveau produit, avec une approche scientifique et pédagogique qui en explicite les bénéfices tout en installant un climat de confiance.",
+    media: "https://youtu.be/C5oCeg9PXqg",
+    date: new Date(2026, 5, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
+    customer: {
+      name: "Rodenstock",
+      comment:
+        "Extremement satisfaite du professionnalisme et de la reactivite de Valentin. Il a retravaillé a plusieurs reprises pour que cela corresponde a nos attentes ! Je recommande",
+    },
+  },
+  {
+    title: "Voix éducative – Ville de Lacanau",
+    description:
+      "Interprétation d'un personnage au service d'un contenu éducatif pour la ville de Lacanau, avec un ton sympathique et complice qui donne envie d'écouter et rend le propos vulgarisé accessible à tous.",
+    media: "img/baf",
+    date: new Date(2026, 6, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "La BAF",
+      comment:
+        "Première fois que je travaille avec Valentin pour une voix off et je ne regrette pas. Il est très réactif, professionnel et c'est très agréable de travailler avec lui. Il comprend très vite ce que l'on veut et arrive à le retranscrire dans le ton de sa voix. C'était très important pour moi car il s'agissait de donner de la personnalité à un personnage motion design. J'espère avoir très vite de nouveaux projets à lui proposer. Un grand merci à toi Valentin.",
+    },
+  },
+  {
+    title: "Doublage – Hawkmon & Gennai (Digimon Kizuna)",
+    description:
+      "Doublage des personnages d'Hawkmon et de Gennai pour un fandub du film Digimon Kizuna, avec deux registres contrastés, l'un vif et compagnon, l'autre posé et mystérieux, pour une sortie prévue à l'automne 2026.",
+    media: "img/digimon",
+    date: new Date(2026, 6, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Digimon Project",
+      comment: null,
+    },
+  },
+  {
+    title: "Voix institutionnelle – Ipsen",
+    description:
+      "Narration claire et pédagogique pour des vidéos institutionnelles Ipsen détaillant le fonctionnement de plusieurs process internes, avec un débit posé et structuré qui facilite la compréhension des équipes.",
+    media: "https://youtube.com/watch?v=V6f4QrE8qWA&feature=youtu.be",
+    date: new Date(2026, 7, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
+    customer: {
+      name: "Camille Farnier / Ipsen",
+      comment:
+        "Valentin a été super tout le long, force de proposition, disponible, arrangeant, il comprend vite et réajuste son jeu en fonction !",
+    },
+  },
+  {
+    title: "Vidéo inspirante – Foncia",
+    description:
+      "Voix chaleureuse et engageante pour une vidéo inspirante Foncia, avec un ton positif et fédérateur qui porte le message et donne de l'élan au récit.",
+    media: "https://youtu.be/xDfVAsLi3Yo",
+    date: new Date(2026, 7, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
+    customer: {
+      name: "L'illuminerie / Foncia",
+      comment:
+        "Valentin a été très réactif tout au long du projet qui avait une deadline très serrée. Cela a été un vrai plaisir de travailler avec lui, je recommande sans hésiter !",
+    },
+  },
+  {
+    title: "Comédie musicale – Abysse Hotel",
+    description:
+      "Chanteur, danseur et comédien sur la comédie musicale Abysse Hotel à Toulouse, un spectacle mêlant jeu scénique, chorégraphies et chant, dont la première représentation est prévue fin novembre.",
+    media: "img/abysse_hotel",
+    date: new Date(2026, 1, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    social: "https://www.instagram.com/lesailesdelira",
+  },
+  {
+    title: "Théâtre – Molière en milieu scolaire",
+    description:
+      "Comédien sur des adaptations de pièces de Molière à destination des écoles, collèges et lycées, avec un jeu vivant et accessible qui rend le répertoire classique attrayant pour le jeune public.",
+    media: "img/mots_lierent",
+    date: new Date(2026, 1, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+  },
+  {
+    title: "Voix off YouTube – Syrric Français",
+    description:
+      "Voix off, gestion et direction artistique pour la chaîne Syrric Français, avec une narration douce et posée sur de longues vidéos d'anecdotes autour du jeu vidéo, pensées pour accompagner l'endormissement des spectateurs.",
+    media: "img/syrric",
+    date: new Date(2026, 1, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "Arcto",
+      comment: null,
+    },
   },
 ];
