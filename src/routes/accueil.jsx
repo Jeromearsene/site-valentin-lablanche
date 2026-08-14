@@ -5,6 +5,7 @@ import {
   phoneInternationalization,
   prettyPhoneFormat,
 } from "../utils/phone.utils";
+import { Contact } from "lucide-react";
 
 export function Accueil() {
   return (
@@ -55,7 +56,7 @@ export function Accueil() {
           📄 Télécharger mon CV
         </a>
 
-        <div class="grid [grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))] gap-8 w-full h-fit place-self-end mb-8">
+        <div class="flex flex-col sm:flex-row flex-wrap justify-around gap-8 w-full h-fit place-self-end mb-8 px-2">
           <a
             href={`tel:${phoneInternationalization(PHONE)}`}
             class="flex items-center justify-center gap-2 hover:text-secondary"
@@ -89,6 +90,18 @@ export function Accueil() {
               class="h-8 w-8 bg-white p-1 rounded-md"
             />
             <span>@supervallab</span>
+          </a>
+
+          <a
+            href="https://www.voxingpro.com/valentin-lablanche"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 hover:text-secondary"
+          >
+            <button class="h-8 w-8 bg-white rounded-md cursor-pointer">
+              <Contact stroke="black" width="100% " />
+            </button>
+            <span>Voxing Pro</span>
           </a>
 
           <a
