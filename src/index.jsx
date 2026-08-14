@@ -7,6 +7,8 @@ import {
   prerender as ssr,
 } from "preact-iso";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import { Accueil } from "./routes/accueil";
 import { Presentation } from "./routes/presentation";
 import { Portfolio } from "./routes/portfolio";
@@ -22,6 +24,7 @@ export function App() {
           <Route path="/presentation" component={Presentation} />
           <Route path="/portfolio" component={Portfolio} />
         </Router>
+        <Analytics />
       </ErrorBoundary>
     </LocationProvider>
   );
