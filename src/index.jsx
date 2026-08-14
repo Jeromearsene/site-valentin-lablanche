@@ -39,30 +39,20 @@ export function App() {
           📄 Télécharger mon CV
         </a>
 
-        <div class="flex justify-around flex-wrap gap-4 h-fit place-self-end w-full mb-8">
+        <div class="grid [grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))] gap-8 w-full h-fit place-self-end mb-8">
           <a
             href="tel:+33770995394"
-            class="flex items-center gap-2 hover:text-secondary"
+            class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img
-              src="/phone.svg"
-              height={32}
-              width={32}
-              class="bg-white p-1 rounded-md"
-            />
+            <img src="/phone.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
             <span>07 70 99 53 94</span>
           </a>
 
           <a
             href="mailto:vallabpro@gmail.com"
-            class="flex items-center gap-2 hover:text-secondary"
+            class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img
-              src="/envelope.svg"
-              height={32}
-              width={32}
-              class="bg-white p-1 rounded-md"
-            />
+            <img src="/envelope.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
             <span>vallabpro@gmail.com</span>
           </a>
 
@@ -70,13 +60,11 @@ export function App() {
             href="https://www.instagram.com/supervallab"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 hover:text-secondary"
+            class="flex items-center justify-center gap-2 hover:text-secondary"
           >
             <img
               src="/instagram-fill.svg"
-              height={32}
-              width={32}
-              class="bg-white p-1 rounded-md "
+              class="h-8 w-8 bg-white p-1 rounded-md"
             />
             <span>@supervallab</span>
           </a>
@@ -85,14 +73,9 @@ export function App() {
             href="https://linktr.ee/vallab_"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 hover:text-secondary"
+            class="flex items-center justify-center gap-2 hover:text-secondary"
           >
-            <img
-              src="/linktree.svg"
-              height={32}
-              width={32}
-              class="bg-white p-1 rounded-md "
-            />
+            <img src="/linktree.svg" class="h-8 w-8 bg-white p-1 rounded-md" />
             <span>Linktree</span>
           </a>
         </div>
