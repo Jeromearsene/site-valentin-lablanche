@@ -11,25 +11,21 @@ export function APropos() {
 
         <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed text-gray-700">
           <p className="text-center">
-            Fort de <strong>6 ans d'expérience</strong> dans le développement
-            informatique, j'ai eu le temps de maturer mon projet avec l'appui de
-            certains
-            <strong> professionnels</strong> du monde du spectacle qui m'ont
-            conforté dans mes <strong>aspirations artistiques</strong>.
+            Fort d’une pratique professionnelle déjà en plein essor, j’ai trouvé
+            dans le métier de comédien — au théâtre, à l’écran ou derrière le
+            micro — une voie d’expression artistique qui me passionne. Je
+            m’attache à approfondir mon jeu et ma présence scénique en
+            m’immergeant dans des <strong>projets variés</strong>, porté par
+            l’envie de transmettre, d’émouvoir et de faire vivre des histoires.
           </p>
           <p className="text-center">
-            Pour initier mon projet, j'ai mis en place des objectifs de
-            production de doublage, de chant ainsi que des prestations
-            <strong> scéniques</strong>, et entamé des{" "}
-            <strong>collaborations</strong> avec des artistes de la communauté
-            toulousaine.
-          </p>
-          <p className="text-center">
-            Ayant multiplié les expériences amateur, toute ma{" "}
-            <strong>motivation</strong> est déployée à multiplier les{" "}
-            <strong>occasions professionnelles</strong> et ainsi pouvoir{" "}
-            <strong>apprendre</strong> de vos retours et vous montrer ce dont je
-            suis <strong>capable</strong>.
+            Mon objectif est de tisser des{" "}
+            <strong>rencontres et des collaborations</strong>
+            riches de sens, d’<strong>échanger</strong> avec d’autres artistes
+            et techniciens, et de progresser à travers chaque expérience. Je
+            saurai faire preuve de <strong>créativité</strong> et de{" "}
+            <strong>propositions</strong>, et mettre toutes mes compétences au
+            service d’une prestation aboutie et de qualité.
           </p>
         </div>
       </div>
