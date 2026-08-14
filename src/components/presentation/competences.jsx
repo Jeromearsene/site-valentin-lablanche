@@ -1,9 +1,10 @@
-import { User, Mic, Music, Gamepad2 } from "lucide-react";
+import { Music, AudioLines, Theater, Joystick } from "lucide-react";
 
 export function Competences() {
   const competences = [
     {
       title: "Voix",
+      icon: AudioLines,
       items: [
         "Livre audio (Oscar Fedal, 2025)",
         "Doublage (Octobre 2024)",
@@ -15,6 +16,7 @@ export function Competences() {
     },
     {
       title: "Chant",
+      icon: Music,
       items: [
         "Conservatoire (2022 - en cours)",
         'Chorale ("Nota bene", 2022 - en cours)',
@@ -24,6 +26,7 @@ export function Competences() {
     },
     {
       title: "Interprétation scénique",
+      icon: Theater,
       items: [
         "Soliste lors de spectacles",
         "Scènes ouvertes",
@@ -34,6 +37,7 @@ export function Competences() {
     },
     {
       title: "Animation",
+      icon: Joystick,
       items: [
         "Soirée JDR comme MJ",
         "Présentateur et animateur de quiz et soirées jeux",
@@ -41,16 +45,6 @@ export function Competences() {
       ],
     },
   ];
-
-  const getIcon = (title) => {
-    const icons = {
-      "Interprétation scénique": User,
-      Chant: Music,
-      Doublage: Mic,
-      Animation: Gamepad2,
-    };
-    return icons[title] || User;
-  };
 
   return (
     <section className="py-16 bg-custom-white">
@@ -64,14 +58,14 @@ export function Competences() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {competences.map((section, index) => {
-            const IconComponent = getIcon(section.title);
+            const IconComponent = section.icon;
             return (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
               >
                 <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-3 font-tomarik">
-                  <IconComponent className="w-5 h-5 text-secondary" />
+                  <IconComponent className="w-6 h-6 text-secondary" />
                   {section.title}
                 </h3>
                 <ul className="space-y-2">

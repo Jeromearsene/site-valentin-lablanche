@@ -1,13 +1,16 @@
-import { Settings } from "lucide-react";
+import { FolderGit2, Paintbrush2, Podcast } from "lucide-react";
 
 export function Techniques() {
   const techniques = [
-    { icon: Settings, text: "Création de bande rythmo (logiciel Cappela)" },
+    { icon: Podcast, text: "Création de bande rythmo (logiciel Cappela)" },
     {
-      icon: Settings,
+      icon: Paintbrush2,
       text: "Traitement Audio, Design et Montage (Suite Adobe)",
     },
-    { icon: Settings, text: "Gestion de projet (Notion, Confluence, etc...)" },
+    {
+      icon: FolderGit2,
+      text: "Gestion de projet (Notion, Confluence, etc...)",
+    },
   ];
 
   return (
