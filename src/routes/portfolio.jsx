@@ -1,13 +1,33 @@
 import { useState, useMemo } from "preact/hooks";
 import { Layout } from "../components/layout";
 import { PORTFOLIO, PORTFOLIO_CATEGORIES } from "../data/portfolio";
-import { Play, Mic, Volume2, Tv } from "lucide-react";
+import {
+  Play,
+  Mic,
+  Volume2,
+  Tv,
+  Building2,
+  Radio,
+  Theater,
+  Volume1,
+  Music,
+  Headphones,
+  User,
+} from "lucide-react";
 import { FilterBar } from "../components/portfolio/filter-bar";
 import { Card } from "../components/portfolio/card";
 
 const CATEGORY_ICONS = {
-  [PORTFOLIO_CATEGORIES.AUDIOBOOK]: Mic,
+  [PORTFOLIO_CATEGORIES.AUDIOBOOK]: Headphones,
+  [PORTFOLIO_CATEGORIES.DOUBLAGE]: Theater,
   [PORTFOLIO_CATEGORIES.COMMERCIAL]: Tv,
+  [PORTFOLIO_CATEGORIES.INSTITUTIONNEL]: Building2,
+  [PORTFOLIO_CATEGORIES.VOIXOFF]: Radio,
+  [PORTFOLIO_CATEGORIES.JOUE]: Theater,
+  [PORTFOLIO_CATEGORIES.NEUTRE]: Volume1,
+  [PORTFOLIO_CATEGORIES.CHANTEE]: Music,
+  [PORTFOLIO_CATEGORIES.DEMO]: Play,
+  [PORTFOLIO_CATEGORIES.PERSO]: User,
 };
 
 export function Portfolio() {
