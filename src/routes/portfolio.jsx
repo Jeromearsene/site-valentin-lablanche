@@ -101,7 +101,7 @@ export function Portfolio() {
   const getYouTubeEmbedUrl = useCallback((url) => {
     if (!url) return null;
     const videoId = url.match(
-      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([^&\n?#]+)/
     );
     return videoId ? `https://www.youtube.com/embed/${videoId[1]}` : null;
   }, []);
