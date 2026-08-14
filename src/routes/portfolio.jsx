@@ -146,7 +146,7 @@ export function Portfolio() {
     });
   }, [filteredPortfolio, getYouTubeThumbnailUrl]);
 
-  function MediaPreview({ media }) {
+  function MediaPreview({ media: { media, title, categories } }) {
     const [showIframe, setShowIframe] = useState(false);
 
     if (!media) {
@@ -180,6 +180,9 @@ export function Portfolio() {
           className="aspect-video relative cursor-pointer group"
           onClick={() => setShowIframe(true)}
           key={`thumb-${embedUrl}`}
+          data-rybbit-event="play-portfolio-media"
+          data-rybbit-prop-media_title={title}
+          data-rybbit-prop-media_categories={categories}
         >
           <img
             src={thumbnailUrl}
@@ -198,7 +201,13 @@ export function Portfolio() {
         <div className="aspect-video bg-gradient-to-br from-custom-white to-gray-100 flex flex-col items-center justify-center p-4">
           <Volume2 className="w-12 h-12 text-gray-600 mb-4" />
           <audio controls className="w-full max-w-xs">
-            <source src={media} type="audio/mpeg" />
+            <source
+              src={media}
+              type="audio/mpeg"
+              data-rybbit-event="play-portfolio-media"
+              data-rybbit-prop-media_title={title}
+              data-rybbit-prop-media_categories={categories}
+            />
             Votre navigateur ne supporte pas l'élément audio.
           </audio>
         </div>
