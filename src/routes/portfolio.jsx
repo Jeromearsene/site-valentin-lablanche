@@ -20,23 +20,32 @@ import { ResponsiveImage } from "../components/common/responsive-image";
 import { getResponsiveImage } from "../utils/image.utils";
 
 const CATEGORY_ICONS = {
-  [PORTFOLIO_CATEGORIES.AUDIOBOOK]: Headphones,
-  [PORTFOLIO_CATEGORIES.DOUBLAGE]: Theater,
-  [PORTFOLIO_CATEGORIES.COMMERCIAL]: Tv,
-  [PORTFOLIO_CATEGORIES.INSTITUTIONNEL]: Building2,
-  [PORTFOLIO_CATEGORIES.VOIXOFF]: Radio,
-  [PORTFOLIO_CATEGORIES.JOUE]: Theater,
-  [PORTFOLIO_CATEGORIES.NEUTRE]: Volume1,
-  [PORTFOLIO_CATEGORIES.CHANTEE]: Music,
-  [PORTFOLIO_CATEGORIES.DEMO]: Play,
-  [PORTFOLIO_CATEGORIES.PERSO]: User,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK]: Headphones,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE]: Theater,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL]: Tv,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL]: Building2,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF]: Radio,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO]: User,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO]: Play,
+  [PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE]: Theater,
+  [PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE]: Volume1,
+  [PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE]: Music,
 };
 
 export function Portfolio() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedProjectTypes, setSelectedProjectTypes] = useState([]);
+  const [selectedVocalStyles, setSelectedVocalStyles] = useState([]);
 
-  const toggleCategory = (category) => {
-    setSelectedCategories((prev) =>
+  const toggleProjectType = (category) => {
+    setSelectedProjectTypes((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const toggleVocalStyle = (category) => {
+    setSelectedVocalStyles((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
         : [...prev, category]
@@ -44,15 +53,34 @@ export function Portfolio() {
   };
 
   const clearFilters = () => {
-    setSelectedCategories([]);
+    setSelectedProjectTypes([]);
+    setSelectedVocalStyles([]);
   };
 
-  const filteredPortfolio =
-    selectedCategories.length === 0
-      ? PORTFOLIO
-      : PORTFOLIO.filter((item) =>
-          item.categories.some((cat) => selectedCategories.includes(cat))
-        );
+  const filteredPortfolio = useMemo(() => {
+    return PORTFOLIO.filter((item) => {
+      // If no filters, display all
+      if (
+        selectedProjectTypes.length === 0 &&
+        selectedVocalStyles.length === 0
+      ) {
+        return true;
+      }
+
+      //  Check project type
+      const matchesProjectType =
+        selectedProjectTypes.length === 0 ||
+        selectedProjectTypes.some((type) => item.categories.includes(type));
+
+      // Check vocal style
+      const matchesVocalStyle =
+        selectedVocalStyles.length === 0 ||
+        selectedVocalStyles.some((style) => item.categories.includes(style));
+
+      // AND between 2 categories
+      return matchesProjectType && matchesVocalStyle;
+    });
+  }, [selectedProjectTypes, selectedVocalStyles]);
 
   const formatDate = (date) => {
     return date.toLocaleDateString("fr-FR", {
@@ -220,8 +248,10 @@ export function Portfolio() {
 
           {/* Filter Bar */}
           <FilterBar
-            selectedCategories={selectedCategories}
-            toggleCategory={toggleCategory}
+            selectedProjectTypes={selectedProjectTypes}
+            selectedVocalStyles={selectedVocalStyles}
+            toggleProjectType={toggleProjectType}
+            toggleVocalStyle={toggleVocalStyle}
             clearFilters={clearFilters}
             filteredPortfolio={filteredPortfolio}
             getCategoryIcon={getCategoryIcon}

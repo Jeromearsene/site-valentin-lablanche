@@ -1,14 +1,18 @@
 export const PORTFOLIO_CATEGORIES = {
-  AUDIOBOOK: "Livre audio",
-  DOUBLAGE: "Doublage",
-  COMMERCIAL: "Commerciale",
-  INSTITUTIONNEL: "Institutionnelle",
-  VOIXOFF: "Voix off",
-  JOUE: "Joué",
-  NEUTRE: "Neutre",
-  CHANTEE: "Chantée",
-  DEMO: "Bande Demo",
-  PERSO: "Réalisation personnelle",
+  PROJECT_TYPES: {
+    AUDIOBOOK: "Livre audio",
+    DOUBLAGE: "Doublage",
+    COMMERCIAL: "Commerciale",
+    INSTITUTIONNEL: "Institutionnelle",
+    VOIXOFF: "Voix off",
+    PERSO: "Réalisation personnelle",
+    DEMO: "Bande Demo",
+  },
+  VOCAL_STYLES: {
+    JOUE: "Joué",
+    NEUTRE: "Neutre",
+    CHANTEE: "Chantée",
+  },
 };
 
 export const PORTFOLIO = [
@@ -18,7 +22,10 @@ export const PORTFOLIO = [
       "Narration complète d'une nouvelle Thriller/Polar avec différentes voix de personnages. Travail sur l'intonation et le rythme pour maintenir l'engagement de l'auditeur.",
     media: "https://youtu.be/3WqsV-ipWYs",
     date: new Date(2025, 5, 0),
-    categories: [PORTFOLIO_CATEGORIES.AUDIOBOOK, PORTFOLIO_CATEGORIES.JOUE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
     customer: {
       name: "Oscar Fedal",
       comment: "Tu as fait un incroyable boulot c’est vraiment génial!",
@@ -32,7 +39,10 @@ export const PORTFOLIO = [
       "Voix de mafieux grave et menaçante, utilisée en mise en scène pour instaurer une tension dramatique et immersive",
     media: "https://www.youtube.com/watch?v=IJrLhpnXIYY",
     date: new Date(2025, 2, 0),
-    categories: [PORTFOLIO_CATEGORIES.VOIXOFF, PORTFOLIO_CATEGORIES.JOUE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
     customer: {
       name: "Magic Air one",
       comment: "Professionnel et très réactif. N'hésitez pas !",
@@ -46,7 +56,10 @@ export const PORTFOLIO = [
       "Interprétation d’un personnage de manga avec une voix expressive et fidèle, renforçant l’immersion et l’impact scénique lors d’une performance cosplay.",
     media: "https://youtu.be/ToS7eVyGDBs",
     date: new Date(2025, 2, 0),
-    categories: [PORTFOLIO_CATEGORIES.VOIXOFF, PORTFOLIO_CATEGORIES.JOUE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
     customer: {
       name: "Takehana",
       comment:
@@ -60,9 +73,9 @@ export const PORTFOLIO = [
     media: "https://www.youtube.com/watch?v=FXPCO6ueTcc",
     date: new Date(2025, 6, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
-      PORTFOLIO_CATEGORIES.NEUTRE,
-      PORTFOLIO_CATEGORIES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
     ],
     customer: {
       name: "Béatrice",
@@ -78,9 +91,9 @@ export const PORTFOLIO = [
     media: "https://www.youtube.com/watch?v=cYPTaL46yPQ",
     date: new Date(2025, 4, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
-      PORTFOLIO_CATEGORIES.JOUE,
-      PORTFOLIO_CATEGORIES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
     ],
     customer: {
       name: "Béatrice",
@@ -96,9 +109,9 @@ export const PORTFOLIO = [
     media: "https://www.youtube.com/watch?v=HPHsrTw0CUk",
     date: new Date(2017, 9, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.COMMERCIAL,
-      PORTFOLIO_CATEGORIES.NEUTRE,
-      PORTFOLIO_CATEGORIES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
     ],
     customer: {
       name: "BubbleFlat",
@@ -113,7 +126,10 @@ export const PORTFOLIO = [
       "Voix parlée et jouée pour des mises en situation vivantes dans un cours de français langue étrangère, facilitant l’apprentissage par le dialogue et le contexte.",
     media: "img/sprachheld",
     date: new Date(2025, 6, 0),
-    categories: [PORTFOLIO_CATEGORIES.JOUE, PORTFOLIO_CATEGORIES.VOIXOFF],
+    categories: [
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+    ],
     customer: {
       name: "Sprachheld",
       comment:
@@ -127,9 +143,9 @@ export const PORTFOLIO = [
     media: "https://www.youtube.com/watch?v=SiymRe4E9IU",
     date: new Date(2025, 4, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
-      PORTFOLIO_CATEGORIES.DOUBLAGE,
-      PORTFOLIO_CATEGORIES.JOUE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
     customer: {
       name: "Benoit",
@@ -144,8 +160,8 @@ export const PORTFOLIO = [
     media: "https://www.youtube.com/watch?v=ecmWqhO049E",
     date: new Date(2025, 6, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
-      PORTFOLIO_CATEGORIES.JOUE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
     customer: {
       name: "Clemence",
@@ -159,7 +175,10 @@ export const PORTFOLIO = [
       "Voix dynamique et incarnée pour un serious game ludique mêlant cuisine et intelligence artificielle, conçu pour initier les joueurs au prompting de manière interactive.",
     media: "img/cuisine_et_IA",
     date: new Date(2025, 6, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.JOUE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
     customer: {
       name: "Studio Media Group",
       comment: null,
@@ -171,7 +190,10 @@ export const PORTFOLIO = [
       "Interprétation vocale en scène ouverte, chant en live accompagné à la guitare, dans une ambiance chaleureuse et authentique face au public.",
     media: "https://youtu.be/dIxsDGHfMr8",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.CHANTEE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Redoublage – Spike & Jet (Cowboy Bebop)",
@@ -179,7 +201,10 @@ export const PORTFOLIO = [
       "Interprétation fidèle des voix de Spike et Jet, basée uniquement sur l’écoute de la VO, avec un travail précis sur le rythme, les intentions et la complémentarité des deux personnages.",
     media: "https://youtu.be/zow8ttYadU4",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Redoublage – Maugrey Fol Œil (Harry Potter 4)",
@@ -187,7 +212,10 @@ export const PORTFOLIO = [
       "Voix grave et rugueuse pour incarner l’intensité et la paranoïa du personnage, avec un travail d’interprétation fidèle à l’original pour restituer son charisme troublant.",
     media: "https://youtu.be/f2BbCAsUmYo",
     date: new Date(2024, 10, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Redoublage – Le Grinch",
@@ -195,7 +223,10 @@ export const PORTFOLIO = [
       "Voix exagérée et théâtrale pour incarner l’humour grinçant et les sautes d’humeur du Grinch, avec un jeu vocal riche en nuances pour servir l’esprit cartoon du personnage.",
     media: "https://youtu.be/w_xXz4n68xA",
     date: new Date(2024, 12, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Redoublage – Génie d’Aladdin",
@@ -204,9 +235,9 @@ export const PORTFOLIO = [
     media: "https://youtu.be/5hmKAOyUphw?si=CG2nnr28q-KIPwJg&t=24",
     date: new Date(2024, 10, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.CHANTEE,
-      PORTFOLIO_CATEGORIES.DOUBLAGE,
-      PORTFOLIO_CATEGORIES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
     ],
   },
   {
@@ -215,7 +246,10 @@ export const PORTFOLIO = [
       "Interprétation intense et émotionnelle de la scène finale entre Peter Parker et Otto Octavius, mêlant tension dramatique et vulnérabilité pour restituer la force narrative du jeu.",
     media: "https://youtu.be/7EP30jHrbIY",
     date: new Date(2025, 1, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Redoublage – Syndrome (Les Indestructibles)",
@@ -223,7 +257,10 @@ export const PORTFOLIO = [
       "Voix arrogante et survoltée pour capturer l’excentricité et la mégalomanie de Syndrome, avec un jeu énergique fidèle au ton satirique du personnage.",
     media: "https://youtu.be/2PvQjGYAG7s",
     date: new Date(2025, 1, 0),
-    categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Bande Démo 2025 - Voix Gutturale",
@@ -231,7 +268,7 @@ export const PORTFOLIO = [
       "Exploration d’un registre grave et intense, mettant en valeur une voix gutturale maîtrisée, utilisée pour créer tension, autorité et impact dramatique.",
     media: "https://youtu.be/MBo0clfnniU",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.DEMO],
+    categories: [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO],
   },
   {
     title: "Bande Demo 2025 - Voix Claire",
@@ -239,7 +276,7 @@ export const PORTFOLIO = [
       "Voix lumineuse et naturelle, adaptée à des registres variés : narration accessible, dialogue vivant, ton pédagogique ou publicitaire engageant.",
     media: "https://youtu.be/0u0IResVWOE",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.DEMO],
+    categories: [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO],
   },
   {
     title: "Bande Demo 2025 - Voix Commerciale",
@@ -247,7 +284,7 @@ export const PORTFOLIO = [
       "Voix dynamique et impactante, conçue pour capter l’attention et valoriser les messages publicitaires avec énergie, clarté et justesse de ton.",
     media: "https://youtu.be/IRvnIV3ac3A",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.DEMO],
+    categories: [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO],
   },
   {
     title: "Conte audio – Enfants",
@@ -256,9 +293,9 @@ export const PORTFOLIO = [
     media: "https://youtu.be/pXrC6YA52Bw",
     date: new Date(2025, 5, 0),
     categories: [
-      PORTFOLIO_CATEGORIES.PERSO,
-      PORTFOLIO_CATEGORIES.JOUE,
-      PORTFOLIO_CATEGORIES.AUDIOBOOK,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK,
     ],
   },
   {
@@ -267,7 +304,10 @@ export const PORTFOLIO = [
       "Interprétation vocale en direct sur scène, alliant présence scénique, justesse et émotion pour créer une connexion authentique avec le public.",
     media: "https://youtu.be/Ipaq8KWxElc",
     date: new Date(2017, 7, 0),
-    categories: [PORTFOLIO_CATEGORIES.CHANTEE, PORTFOLIO_CATEGORIES.PERSO],
+    categories: [
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
+    ],
   },
   {
     title: "Publicité Radio – Carrefour",
@@ -275,7 +315,10 @@ export const PORTFOLIO = [
       "Voix enjouée et rythmée pour une publicité radio promotionnelle, mettant en valeur les offres Carrefour avec clarté et dynamisme.",
     media: "https://youtu.be/C50Fl81KsWY",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.COMMERCIAL, PORTFOLIO_CATEGORIES.JOUE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
   },
   {
     title: "Publicité Radio – Banque en ligne",
@@ -283,7 +326,10 @@ export const PORTFOLIO = [
       "Voix moderne et rassurante pour une publicité radio, valorisant les services d’une e-bank avec un ton accessible, clair et professionnel.",
     media: "https://youtu.be/7FEkqs0W1so",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.COMMERCIAL, PORTFOLIO_CATEGORIES.NEUTRE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
   },
   {
     title: "Publicité Vidéo – Lot-et-Garonne",
@@ -291,6 +337,9 @@ export const PORTFOLIO = [
       "Voix chaleureuse et dynamique pour une vidéo promotionnelle du Lot-et-Garonne, portée par le sourire et l’enthousiasme pour valoriser le territoire et son art de vivre.",
     media: "https://youtu.be/QsumzFuin0E",
     date: new Date(2025, 4, 0),
-    categories: [PORTFOLIO_CATEGORIES.COMMERCIAL, PORTFOLIO_CATEGORIES.NEUTRE],
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE,
+    ],
   },
 ];
