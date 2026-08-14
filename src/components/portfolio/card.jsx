@@ -1,4 +1,6 @@
 import { Calendar, User, Quote } from "lucide-react";
+import { ResponsiveImage } from "../common/responsive-image";
+import { getResponsiveImage } from "../../utils/image.utils";
 
 export function Card({
   item,
@@ -42,33 +44,37 @@ export function Card({
         </div>
 
         {/* Customer Info */}
-        <div className="border-t border-gray-100 pt-4">
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <User className="w-4 h-4 text-white" />
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="font-medium text-primary">
-                  {item.customer.name}
-                </span>
-                {item.customer.logo && (
-                  <div className="w-5 h-5 bg-gray-200 rounded border">
-                    {/* Logo placeholder */}
+        {item.customer && (
+          <div className="border-t border-gray-100 pt-4">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                {item.customer.logo ? (
+                  <ResponsiveImage
+                    images={getResponsiveImage(item.customer.logo)}
+                    alt={`Logo de ${item.customer.name}`}
+                  />
+                ) : (
+                  <User className="w-4 h-4 text-white" />
+                )}
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-medium text-primary">
+                    {item.customer.name}
+                  </span>
+                </div>
+                {item.customer.comment && (
+                  <div className="flex items-start gap-2 mt-2">
+                    <Quote className="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-xs text-gray-600 italic leading-relaxed">
+                      "{item.customer.comment}"
+                    </p>
                   </div>
                 )}
               </div>
-              {item.customer.comment && (
-                <div className="flex items-start gap-2 mt-2">
-                  <Quote className="w-3 h-3 text-gray-400 mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-gray-600 italic leading-relaxed">
-                    "{item.customer.comment}"
-                  </p>
-                </div>
-              )}
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
