@@ -149,15 +149,20 @@ export function Portfolio() {
 
           {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPortfolio.map((item, index) => (
-              <Card
-                key={index}
-                formatDate={formatDate}
-                getCategoryIcon={getCategoryIcon}
-                renderMediaPreview={renderMediaPreview}
-                item={item}
-              />
-            ))}
+            {filteredPortfolio
+              .sort(
+                (a, b) =>
+                  new Date(b.date).getTime() - new Date(a.date).getTime()
+              )
+              .map((item, index) => (
+                <Card
+                  key={index}
+                  formatDate={formatDate}
+                  getCategoryIcon={getCategoryIcon}
+                  renderMediaPreview={renderMediaPreview}
+                  item={item}
+                />
+              ))}
           </div>
 
           {/* Empty state */}
