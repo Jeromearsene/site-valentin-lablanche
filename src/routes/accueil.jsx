@@ -7,7 +7,7 @@ export function Accueil() {
       <ResponsiveImage
         images={getResponsiveImage("photo")}
         alt="Photo de Valentin Lablanche"
-        className="hover:scale-110 transition saturate-0 hover:saturate-100 hidden sm:block"
+        className="hover:scale-110 transition saturate-0 hover:saturate-100 hidden sm:block h-full object-cover"
       />
 
       <main class=" m-6 w-full grid border-2 border-white outline-2 outline-white outline-offset-4">
