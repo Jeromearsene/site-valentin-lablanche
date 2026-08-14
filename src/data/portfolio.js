@@ -58,7 +58,7 @@ export const PORTFOLIO = [
     description:
       "Voix posée et pédagogique pour un projet de vulgarisation grand public sur le cytomégalovirus, alliant clarté et accessibilité.",
     media: "https://www.youtube.com/watch?v=FXPCO6ueTcc",
-    date: new Date(2024, 6, 0),
+    date: new Date(2025, 6, 0),
     categories: [
       PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
       PORTFOLIO_CATEGORIES.NEUTRE,
@@ -76,7 +76,7 @@ export const PORTFOLIO = [
     description:
       "Dialogue naturel et empathique entre deux parents, destiné à rassurer et normaliser les difficultés des premiers mois avec bébé dans une vidéo de soutien aux jeunes familles.",
     media: "https://www.youtube.com/watch?v=cYPTaL46yPQ",
-    date: new Date(2024, 4, 0),
+    date: new Date(2025, 4, 0),
     categories: [
       PORTFOLIO_CATEGORIES.INSTITUTIONNEL,
       PORTFOLIO_CATEGORIES.JOUE,
