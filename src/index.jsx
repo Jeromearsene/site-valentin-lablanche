@@ -9,6 +9,7 @@ import {
 
 import { Accueil } from "./routes/accueil";
 import { Presentation } from "./routes/presentation";
+import { Portfolio } from "./routes/portfolio";
 
 import "./style.css";
 
@@ -19,6 +20,7 @@ export function App() {
         <Router>
           <Route path="/" component={Accueil} />
           <Route path="/presentation" component={Presentation} />
+          <Route path="/portfolio" component={Portfolio} />
         </Router>
       </ErrorBoundary>
     </LocationProvider>
