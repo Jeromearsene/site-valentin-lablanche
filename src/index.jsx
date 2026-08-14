@@ -67,7 +67,7 @@ export function App() {
           </a>
 
           <a
-            href="https://www.instagram.com/tonprofil"
+            href="https://www.instagram.com/supervallab"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center gap-2 hover:text-secondary"
