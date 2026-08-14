@@ -111,7 +111,7 @@ export const PORTFOLIO = [
     title: "Cours de Français - Voix d'exemple et mise en situation",
     description:
       "Voix parlée et jouée pour des mises en situation vivantes dans un cours de français langue étrangère, facilitant l’apprentissage par le dialogue et le contexte.",
-    media: null,
+    media: "img/sprachheld",
     date: new Date(2025, 6, 0),
     categories: [PORTFOLIO_CATEGORIES.JOUE, PORTFOLIO_CATEGORIES.VOIXOFF],
     customer: {
@@ -157,7 +157,7 @@ export const PORTFOLIO = [
     title: "Serious Game - Cuisine et IA",
     description:
       "Voix dynamique et incarnée pour un serious game ludique mêlant cuisine et intelligence artificielle, conçu pour initier les joueurs au prompting de manière interactive.",
-    media: null,
+    media: "img/cuisine_et_IA",
     date: new Date(2025, 6, 0),
     categories: [PORTFOLIO_CATEGORIES.DOUBLAGE, PORTFOLIO_CATEGORIES.JOUE],
     customer: {
@@ -253,7 +253,7 @@ export const PORTFOLIO = [
     title: "Conte audio – Enfants",
     description:
       "Réalisation complète d’une nouvelle audio pour enfants : narration expressive, habillage sonore et composition musicale originale pour une immersion douce et magique.",
-    media: "sound/le-poisson-d-or.mp3",
+    media: "https://youtu.be/pXrC6YA52Bw",
     date: new Date(2025, 5, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PERSO,
@@ -273,7 +273,7 @@ export const PORTFOLIO = [
     title: "Publicité Radio – Carrefour",
     description:
       "Voix enjouée et rythmée pour une publicité radio promotionnelle, mettant en valeur les offres Carrefour avec clarté et dynamisme.",
-    media: "sound/carrefour.mp3",
+    media: "https://youtu.be/C50Fl81KsWY",
     date: new Date(2025, 4, 0),
     categories: [PORTFOLIO_CATEGORIES.COMMERCIAL, PORTFOLIO_CATEGORIES.JOUE],
   },
@@ -281,7 +281,7 @@ export const PORTFOLIO = [
     title: "Publicité Radio – Banque en ligne",
     description:
       "Voix moderne et rassurante pour une publicité radio, valorisant les services d’une e-bank avec un ton accessible, clair et professionnel.",
-    media: "sound/ebank.mp3",
+    media: "https://youtu.be/7FEkqs0W1so",
     date: new Date(2025, 4, 0),
     categories: [PORTFOLIO_CATEGORIES.COMMERCIAL, PORTFOLIO_CATEGORIES.NEUTRE],
   },

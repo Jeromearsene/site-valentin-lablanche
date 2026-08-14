@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { FilterBar } from "../components/portfolio/filter-bar";
 import { Card } from "../components/portfolio/card";
+import { ResponsiveImage } from "../components/common/responsive-image";
+import { getResponsiveImage } from "../utils/image.utils";
 
 const CATEGORY_ICONS = {
   [PORTFOLIO_CATEGORIES.AUDIOBOOK]: Headphones,
@@ -97,6 +99,11 @@ export function Portfolio() {
     return audioExtensions.some((ext) => url.toLowerCase().includes(ext));
   };
 
+  const isImage = (url) => {
+    if (!url) return false;
+    return url.startsWith("img/");
+  };
+
   // Preload YouTube thumbnails on filter change
   useEffect(() => {
     filteredPortfolio.forEach((item) => {
@@ -166,6 +173,17 @@ export function Portfolio() {
             <source src={media} type="audio/mpeg" />
             Votre navigateur ne supporte pas l'élément audio.
           </audio>
+        </div>
+      );
+    }
+
+    if (isImage(media)) {
+      return (
+        <div className="aspect-video bg-gradient-to-br from-custom-white to-gray-100 flex flex-col justify-center">
+          <ResponsiveImage
+            images={getResponsiveImage(media.replace("img/", ""))}
+            alt="Illustration de l'expérience"
+          />
         </div>
       );
     }
