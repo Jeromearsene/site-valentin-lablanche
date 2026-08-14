@@ -1,17 +1,53 @@
 @import "tailwindcss";
 
 @font-face {
-	font-family: Tomarik;
-	font-style: normal;
-	font-weight: 200 700;
-	font-display: swap;
-	src: url("/fonts/tomarik/Tomarik-Display.ttf") format("truetype");
-  }
+  font-family: Tomarik;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/tomarik/Tomarik-Display.ttf") format("truetype");
+}
 
 @theme {
-	--font-title: "Tomarik", "sans-serif"; 
+  --font-tomarik: "Tomarik", "sans-serif";
+  --font-louvette: "louvette-banner";
+  --font-articulat: "articulat-cf";
+  --font-dalliance: "dalliance-flourishes";
+  --color-primary: #000000;
+  --color-secondary: #ff0000;
+  --color-custom-white: #f5f1ea;
+}
 
-	--color-primary: #000000;
-	--color-secondary: #FF0000;
-	--color-custom-white: #F5F1EA;
+@keyframes border-dance {
+  0% {
+    background-position: 0 0, 100% 100%, 0 100%, 100% 0;
   }
+  100% {
+    background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+  }
+}
+
+.border-dance {
+  --border-size: 2px;
+  --border-gap: 15px;
+  --border-length: 300px;
+
+  background: linear-gradient(
+      90deg,
+      var(--color-secondary) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, var(--color-secondary) 50%, transparent 50%),
+    linear-gradient(0deg, var(--color-secondary) 50%, transparent 50%),
+    linear-gradient(0deg, var(--color-secondary) 50%, transparent 50%);
+
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: var(--border-gap) var(--border-size),
+    var(--border-gap) var(--border-size), var(--border-size) var(--border-gap),
+    var(--border-size) var(--border-gap);
+
+  background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+
+  position: relative;
+  animation: border-dance 10s infinite linear;
+}
