@@ -4,27 +4,24 @@ export function APropos() {
       <div class="container text-center contents">
         <div class="flex flex-col gap-6 max-w-xl">
           <p>
-            Issu du monde du developpement informatique, je me suis réorienté
-            vers le domaine artistique. Plus proches de mes envies et de mes
-            compétences naturelles, l'appuie de certaine personne du milieu du
-            spectacle et de la musique m'ont permis de confirmer mon choix de
-            réorientation.
+            Fort de 6 ans d'expérience dans le développement informatique, j'ai
+            eu le temps de maturer mon projet avec l'appui de certains
+            <b>professionnels</b> du monde du spectacle qui m'ont conforté dans
+            mes
+            <b>aspirations artistiques</b>.
           </p>
           <p>
-            J'ai pu mettre en place, durant ces derniers mois, des méthodes de
-            travails et de création me permettant de sortir 2 vidéos par
-            semaine, me poussant à créer, tenter et explorer de nouvelle choses,
-            tout en validant mes acquis.
+            Pour initier mon projet, j'ai mis en place des objectifs de
+            production de doublage, de chant ainsi que des prestations
+            <b>scéniques</b>, et entamé des <b>collaborations</b> avec des
+            artistes de la communauté toulousaine.
           </p>
           <p>
-            Conscient d'être débutant dans ce milieu, mon premier objectif est
-            de multiplier les expériences professionnelles pour m'améliorer
-            grace au retours sur mon travail
-          </p>
-          <p>
-            Enfin, le meilleur moyen pour moi de vous montrer mes compétences et
-            mon envie sera de vous montrer de vive voix ce dont je suis capable,
-            alors n'hésitez pas à me contacter si mon profil vous intrigue
+            Ayant multiplié les expériences amateur, toute ma <b>motivation</b>{" "}
+            est déployée à multiplier les <b>occasions professionnelle</b> et
+            ainsi pouvoir
+            <b>apprendre</b> de vos retours et vous montrer ce dont je suis{" "}
+            <b>capable</b>.
           </p>
         </div>
       </div>
