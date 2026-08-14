@@ -80,6 +80,21 @@ export function App() {
             />
             <span>@supervallab</span>
           </a>
+
+          <a
+            href="https://linktr.ee/vallab_"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 hover:text-secondary"
+          >
+            <img
+              src="/linktree.svg"
+              height={32}
+              width={32}
+              class="bg-white p-1 rounded-md "
+            />
+            <span>Linktree</span>
+          </a>
         </div>
       </div>
     </div>
