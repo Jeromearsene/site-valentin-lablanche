@@ -6,6 +6,7 @@ import { Techniques } from "../components/presentation/techniques";
 import { Mic } from "lucide-react";
 import { getResponsiveImage } from "../utils/image.utils";
 import { SectionWithImage } from "../components/common/section-with-image";
+import { CallToAction } from "../components/common/call-to-action";
 
 export function Presentation() {
   return (
@@ -62,21 +63,7 @@ export function Presentation() {
           <Techniques />
         </SectionWithImage>
 
-        {/* Call to Action */}
-        {/* <section className="bg-primary py-16">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-custom-white mb-4 font-tomarik">
-              Prêt à collaborer ?
-            </h2>
-            <p className="text-gray-300 text-lg mb-8">
-              Contactez-moi pour discuter de votre projet et découvrir comment
-              ma voix peut le sublimer.
-            </p>
-            <button className="bg-secondary hover:bg-red-600 text-white px-8 py-3 rounded-full font-medium transition-colors">
-              Me contacter
-            </button>
-          </div>
-        </section> */}
+        <CallToAction />
       </div>
     </Layout>
   );

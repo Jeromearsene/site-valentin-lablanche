@@ -1,5 +1,10 @@
+import { MAIL, PHONE } from "../constants/coordinates";
 import { ResponsiveImage } from "../components/common/responsive-image";
 import { getResponsiveImage } from "../utils/image.utils";
+import {
+  phoneInternationalization,
+  prettyPhoneFormat,
+} from "../utils/phone.utils";
 
 export function Accueil() {
   return (
@@ -52,25 +57,25 @@ export function Accueil() {
 
         <div class="grid [grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))] gap-8 w-full h-fit place-self-end mb-8">
           <a
-            href="tel:+33770995394"
+            href={`tel:${phoneInternationalization(PHONE)}`}
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
             <img
               src="/img/svg/phone.svg"
               class="h-8 w-8 bg-white p-1 rounded-md"
             />
-            <span>07 70 99 53 94</span>
+            <span>{prettyPhoneFormat(PHONE)}</span>
           </a>
 
           <a
-            href="mailto:vallabpro@gmail.com"
+            href={`mailto:${MAIL}`}
             class="flex items-center justify-center gap-2 hover:text-secondary"
           >
             <img
               src="/img/svg/envelope.svg"
               class="h-8 w-8 bg-white p-1 rounded-md"
             />
-            <span>vallabpro@gmail.com</span>
+            <span>{MAIL}</span>
           </a>
 
           <a
