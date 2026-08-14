@@ -17,7 +17,7 @@ export function Presentation() {
               <Mic className="w-12 h-12 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 font-tomarik">
-              Doubleur de Voix
+              Comédien spécialisé dans la Voix
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Passionné par l'art vocal et l'interprétation, je mets ma voix au
