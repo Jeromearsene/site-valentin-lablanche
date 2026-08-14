@@ -9,7 +9,7 @@ export function Card({
   formatDate,
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+    <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
       {/* Media Preview */}
       {renderMediaPreview(item.media)}
 
@@ -45,7 +45,17 @@ export function Card({
 
         {/* Customer Info */}
         {item.customer && (
-          <div className="border-t border-gray-100 pt-4">
+          <div>
+            <div class="flex items-center group-hover:text-secondary mb-3">
+              <div class="flex-1 h-px bg-primary group-hover:bg-secondary transition" />
+              <p class="font-dalliance text-center text-xl mx-6 -mb-1.5">
+                <span>CO</span>
+                <span class="inline-block transform-[scale(-1,1)]">O</span>
+                <span class="inline-block transform-[scale(-1,1)]">C</span>
+              </p>
+              <div class="flex-1 h-px bg-primary group-hover:bg-secondary transition" />
+            </div>
+
             <div className="flex flex-row-reverse items-start gap-3">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 {item.customer.logo ? (
