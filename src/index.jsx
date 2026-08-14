@@ -24,7 +24,7 @@ export function App() {
           <h4>Site en cours de création</h4>
         </div>
 
-        <p class="font-dalliance text-center place-self-center text-xl">
+        <p class="font-dalliance text-center place-self-center text-2xl">
           <span>CO</span>
           <span class="inline-block transform-[scale(-1,1)]">O</span>
           <span class="inline-block transform-[scale(-1,1)]">C</span>
