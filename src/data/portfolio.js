@@ -9,7 +9,7 @@ export const PORTFOLIO_CATEGORIES = {
     DEMO: "Bande Demo",
     JEUXVIDEO: "Jeux vidéo",
     SCENE: "Scène",
-    DIRECTION: "Direction d'acteur",
+    LONGTERME: "Long terme"
   },
   VOCAL_STYLES: {
     JOUE: "Joué",
@@ -466,7 +466,7 @@ export const PORTFOLIO = [
     title: "Chorale – Messa di Gloria de Puccini",
     description:
       "Interprétation en pupitre ténor de la Messa di Gloria de Puccini avec l'Ensemble Vocal Nota Bene et l'Orchestre de Chambre de Toulouse, sous la direction d'Edwin Crossley-Mercer, dans le cadre d'un concert de noel pour Castel Artes.",
-    media: "img/nota_bene_messa_di_gloria",
+    media: "img/nota_bene_messa _di_gloria",
     date: new Date(2025, 12, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
@@ -501,7 +501,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Mélio",
-      comment: null,
+      comment: 
+      "Valentin a fait preuve d’un grand professionnalisme du début à la fin du projet. La qualité de la voix off était irréprochable et a parfaitement répondu à mes attentes. Je le recommande vivement à toute personne à la recherche d'une prestation de qualité !",
     },
   },
   {
@@ -524,7 +525,7 @@ export const PORTFOLIO = [
     title: "Chorale – Gloria de Poulenc",
     description:
       "Interprétation en pupitre ténor du Gloria de Poulenc avec l'Ensemble Vocal Nota Bene et Les Conférences Vocales, accompagnés par l'orchestre Toulouse Pink Octopus, sous la direction de Jean-Guy Olive.",
-    media: "img/note_bene_gloria",
+    media: "img/nota_bene_gloria",
     date: new Date(2026, 3, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
@@ -544,11 +545,12 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Licarion",
-      comment: null,
+      comment: 
+      "Très bon comédien, efficace, arrive à s'adapter aux demandes spécifiques en terme de ton, rythme. Côté technique parfait, répond vite. Je recommande !",
     },
   },
   {
-    title: "Voix off YouTube – Personnage Pokémon",
+    title: "Voix personnage YouTube – Pokémon",
     description:
       "Interprétation d'un personnage secondaire de l'univers Pokémon pour une vidéo produite par Nionx sur YouTube, avec un jeu teinté d'humour (projet actuellement en cours de production).",
     media: "img/nionx",
@@ -654,7 +656,7 @@ export const PORTFOLIO = [
     title: "Doublage – Hawkmon & Gennai (Digimon Kizuna)",
     description:
       "Doublage des personnages d'Hawkmon et de Gennai pour un fandub du film Digimon Kizuna, avec deux registres contrastés, l'un vif et compagnon, l'autre posé et mystérieux, pour une sortie prévue à l'automne 2026.",
-    media: "img/digimon",
+    media: "https://www.youtube.com/watch?v=RlovwjFwfzM",
     date: new Date(2026, 6, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
@@ -707,6 +709,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
@@ -720,6 +723,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
   },
@@ -731,6 +735,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
     customer: {
