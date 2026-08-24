@@ -11,8 +11,13 @@ import {
   Theater,
   Volume1,
   Music,
-  Headphones,
   User,
+  Spotlight,
+  CalendarCheck,
+  Gamepad2,
+  Film,
+  BookHeadphones,
+  Drama,
 } from "lucide-react";
 import { FilterBar } from "../components/portfolio/filter-bar";
 import { Card } from "../components/portfolio/card";
@@ -20,14 +25,17 @@ import { ResponsiveImage } from "../components/common/responsive-image";
 import { getResponsiveImage } from "../utils/image.utils";
 
 const CATEGORY_ICONS = {
-  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK]: Headphones,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK]: BookHeadphones,
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE]: Theater,
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.COMMERCIAL]: Tv,
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.INSTITUTIONNEL]: Building2,
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF]: Radio,
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO]: User,
-  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO]: Play,
-  [PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE]: Theater,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.DEMO]: Film,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.JEUXVIDEO]: Gamepad2,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME]: CalendarCheck,
+  [PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE]: Spotlight,
+  [PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE]: Drama,
   [PORTFOLIO_CATEGORIES.VOCAL_STYLES.NEUTRE]: Volume1,
   [PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE]: Music,
 };
