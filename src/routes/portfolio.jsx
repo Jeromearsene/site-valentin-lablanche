@@ -240,9 +240,22 @@ export function Portfolio() {
   }
 
   const sortedPortfolio = useMemo(() => {
-    return filteredPortfolio.sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
+    return filteredPortfolio
+      .filter((item) =>
+        item.categories.includes(PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME),
+      )
+      .concat(
+        filteredPortfolio
+          .filter(
+            (item) =>
+              !item.categories.includes(
+                PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
+              ),
+          )
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+          ),
+      );
   }, [filteredPortfolio]);
 
   return (
