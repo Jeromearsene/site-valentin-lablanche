@@ -19,9 +19,7 @@ export function FilterBar({
     toggleFunction
   ) => (
     <div className="mb-4">
-      <h3 className="text-sm font-medium text-gray-600 mb-2 text-center">
-        {title}
-      </h3>
+      <h3 className="text-lg font-medium text-gray-600 mb-2 ml-2">{title}</h3>
       <div className="overflow-x-auto pb-2">
         <div className="bg-white border border-gray-200 rounded-full shadow-sm p-2 inline-flex items-center gap-2 min-w-max">
           {categories.map((category) => (
