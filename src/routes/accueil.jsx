@@ -6,8 +6,11 @@ import {
   prettyPhoneFormat,
 } from "../utils/phone.utils";
 import { Contact } from "lucide-react";
+import { useTitle } from "hoofd/preact";
 
 export function Accueil() {
+  useTitle("Accueil - Valentin Lablanche");
+
   return (
     <div class="h-screen w-screen bg-primary text-white font-articulat flex">
       <ResponsiveImage

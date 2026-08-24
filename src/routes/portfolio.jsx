@@ -23,6 +23,7 @@ import { FilterBar } from "../components/portfolio/filter-bar";
 import { Card } from "../components/portfolio/card";
 import { ResponsiveImage } from "../components/common/responsive-image";
 import { getResponsiveImage } from "../utils/image.utils";
+import { useTitle } from "hoofd/preact";
 
 const CATEGORY_ICONS = {
   [PORTFOLIO_CATEGORIES.PROJECT_TYPES.AUDIOBOOK]: BookHeadphones,
@@ -41,6 +42,8 @@ const CATEGORY_ICONS = {
 };
 
 export function Portfolio() {
+  useTitle("Portfolio - Valentin Lablanche");
+
   const [selectedProjectTypes, setSelectedProjectTypes] = useState([]);
   const [selectedVocalStyles, setSelectedVocalStyles] = useState([]);
 

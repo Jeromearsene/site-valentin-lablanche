@@ -9,12 +9,15 @@ import { SectionWithImage } from "../components/common/section-with-image";
 import { CallToAction } from "../components/common/call-to-action";
 import { Experiences } from "../components/presentation/experiences";
 import Commentaires from "../components/presentation/commentaires";
+import { useTitle } from "hoofd/preact";
 
 export function Presentation() {
+  useTitle("Présentation - Valentin Lablanche");
+
   return (
     <Layout>
       <div className="min-h-screen font-articulat">
-        <section className="bg-gradient-to-b from-primary to-gray-800 text-custom-white py-20">
+        <section className="bg-linear-to-b from-primary to-gray-800 text-custom-white py-20">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <div className="w-24 h-24 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
               <Mic className="w-12 h-12 text-white" />
