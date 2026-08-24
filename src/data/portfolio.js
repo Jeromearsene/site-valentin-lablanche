@@ -9,7 +9,7 @@ export const PORTFOLIO_CATEGORIES = {
     DEMO: "Bande Demo",
     JEUXVIDEO: "Jeux vidéo",
     SCENE: "Scène",
-    DIRECTION: "Direction d'acteur",
+    LONGTERME: "Long terme",
   },
   VOCAL_STYLES: {
     JOUE: "Joué",
@@ -501,7 +501,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Mélio",
-      comment: null,
+      comment:
+        "Valentin a fait preuve d’un grand professionnalisme du début à la fin du projet. La qualité de la voix off était irréprochable et a parfaitement répondu à mes attentes. Je le recommande vivement à toute personne à la recherche d'une prestation de qualité !",
     },
   },
   {
@@ -544,11 +545,12 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Licarion",
-      comment: null,
+      comment:
+        "Très bon comédien, efficace, arrive à s'adapter aux demandes spécifiques en terme de ton, rythme. Côté technique parfait, répond vite. Je recommande !",
     },
   },
   {
-    title: "Voix off YouTube – Personnage Pokémon",
+    title: "Voix personnage YouTube – Pokémon",
     description:
       "Interprétation d'un personnage secondaire de l'univers Pokémon pour une vidéo produite par Nionx sur YouTube, avec un jeu teinté d'humour (projet actuellement en cours de production).",
     media: "img/nionx",
@@ -586,7 +588,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "La Confrérie des Traducteurs",
-      comment: null,
+      comment:
+        "J'ai eu le plaisir de travailler avec Valentin sur un petit projet de doublage bénévole pour le jeu vidéo Skyrim et il a été réactif et force de proposition pour trouver une voix unique qui convenait au personnage ! Au plaisir de retravailler avec toi, merci beaucoup :)",
     },
   },
   {
@@ -654,7 +657,7 @@ export const PORTFOLIO = [
     title: "Doublage – Hawkmon & Gennai (Digimon Kizuna)",
     description:
       "Doublage des personnages d'Hawkmon et de Gennai pour un fandub du film Digimon Kizuna, avec deux registres contrastés, l'un vif et compagnon, l'autre posé et mystérieux, pour une sortie prévue à l'automne 2026.",
-    media: "img/digimon",
+    media: "https://www.youtube.com/watch?v=oVcXaSOrq1I",
     date: new Date(2026, 6, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
@@ -707,6 +710,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.CHANTEE,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
@@ -720,6 +724,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.SCENE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
   },
@@ -731,6 +736,7 @@ export const PORTFOLIO = [
     date: new Date(2026, 1, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.LONGTERME,
       PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
     ],
     customer: {

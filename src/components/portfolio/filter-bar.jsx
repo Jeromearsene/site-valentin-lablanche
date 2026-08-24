@@ -18,8 +18,8 @@ export function FilterBar({
     selectedCategories,
     toggleFunction
   ) => (
-    <div className="mb-4">
-      <h3 className="text-sm font-medium text-gray-600 mb-2 text-center">
+    <div className="mb-4 group">
+      <h3 className="text-lg font-medium text-gray-600 mb-2 ml-2 group-hover:text-secondary transition duration-200">
         {title}
       </h3>
       <div className="overflow-x-auto pb-2">
