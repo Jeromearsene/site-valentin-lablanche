@@ -9,7 +9,7 @@ export const PORTFOLIO_CATEGORIES = {
     DEMO: "Bande Demo",
     JEUXVIDEO: "Jeux vidéo",
     SCENE: "Scène",
-    LONGTERME: "Long terme"
+    LONGTERME: "Long terme",
   },
   VOCAL_STYLES: {
     JOUE: "Joué",
@@ -501,8 +501,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Mélio",
-      comment: 
-      "Valentin a fait preuve d’un grand professionnalisme du début à la fin du projet. La qualité de la voix off était irréprochable et a parfaitement répondu à mes attentes. Je le recommande vivement à toute personne à la recherche d'une prestation de qualité !",
+      comment:
+        "Valentin a fait preuve d’un grand professionnalisme du début à la fin du projet. La qualité de la voix off était irréprochable et a parfaitement répondu à mes attentes. Je le recommande vivement à toute personne à la recherche d'une prestation de qualité !",
     },
   },
   {
@@ -525,7 +525,7 @@ export const PORTFOLIO = [
     title: "Chorale – Gloria de Poulenc",
     description:
       "Interprétation en pupitre ténor du Gloria de Poulenc avec l'Ensemble Vocal Nota Bene et Les Conférences Vocales, accompagnés par l'orchestre Toulouse Pink Octopus, sous la direction de Jean-Guy Olive.",
-    media: "img/nota_bene_gloria",
+    media: "img/note_bene_gloria",
     date: new Date(2026, 3, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
@@ -545,8 +545,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Licarion",
-      comment: 
-      "Très bon comédien, efficace, arrive à s'adapter aux demandes spécifiques en terme de ton, rythme. Côté technique parfait, répond vite. Je recommande !",
+      comment:
+        "Très bon comédien, efficace, arrive à s'adapter aux demandes spécifiques en terme de ton, rythme. Côté technique parfait, répond vite. Je recommande !",
     },
   },
   {
@@ -588,7 +588,8 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "La Confrérie des Traducteurs",
-      comment: "J'ai eu le plaisir de travailler avec Valentin sur un petit projet de doublage bénévole pour le jeu vidéo Skyrim et il a été réactif et force de proposition pour trouver une voix unique qui convenait au personnage ! Au plaisir de retravailler avec toi, merci beaucoup :)",
+      comment:
+        "J'ai eu le plaisir de travailler avec Valentin sur un petit projet de doublage bénévole pour le jeu vidéo Skyrim et il a été réactif et force de proposition pour trouver une voix unique qui convenait au personnage ! Au plaisir de retravailler avec toi, merci beaucoup :)",
     },
   },
   {
