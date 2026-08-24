@@ -466,7 +466,7 @@ export const PORTFOLIO = [
     title: "Chorale – Messa di Gloria de Puccini",
     description:
       "Interprétation en pupitre ténor de la Messa di Gloria de Puccini avec l'Ensemble Vocal Nota Bene et l'Orchestre de Chambre de Toulouse, sous la direction d'Edwin Crossley-Mercer, dans le cadre d'un concert de noel pour Castel Artes.",
-    media: "img/nota_bene_messa _di_gloria",
+    media: "img/nota_bene_messa_di_gloria",
     date: new Date(2025, 12, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.PERSO,
@@ -588,7 +588,7 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "La Confrérie des Traducteurs",
-      comment: null,
+      comment: "J'ai eu le plaisir de travailler avec Valentin sur un petit projet de doublage bénévole pour le jeu vidéo Skyrim et il a été réactif et force de proposition pour trouver une voix unique qui convenait au personnage ! Au plaisir de retravailler avec toi, merci beaucoup :)",
     },
   },
   {
@@ -656,7 +656,7 @@ export const PORTFOLIO = [
     title: "Doublage – Hawkmon & Gennai (Digimon Kizuna)",
     description:
       "Doublage des personnages d'Hawkmon et de Gennai pour un fandub du film Digimon Kizuna, avec deux registres contrastés, l'un vif et compagnon, l'autre posé et mystérieux, pour une sortie prévue à l'automne 2026.",
-    media: "https://www.youtube.com/watch?v=RlovwjFwfzM",
+    media: "https://www.youtube.com/watch?v=oVcXaSOrq1I",
     date: new Date(2026, 6, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
