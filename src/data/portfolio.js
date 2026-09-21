@@ -424,7 +424,7 @@ export const PORTFOLIO = [
     description:
       "Double interprétation pour l'habillage sonore d'un escape game, entre un génie survolté et facétieux et un vizir grave et machiavélique, avec un jeu expressif au service de l'immersion des joueurs.",
     media: "https://youtu.be/NpwNcPp08-E",
-    date: new Date(2025, 10, 0),
+    date: new Date(2026, 9, 0),
     categories: [
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
       PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
@@ -432,7 +432,23 @@ export const PORTFOLIO = [
     ],
     customer: {
       name: "Zone 15",
-      comment: null,
+      comment: "C'est la deuxième fois que je travaille avec Valentin, et je recommande vivement ses services. Il a enregistré des répliques avec les voix du Génie d'Aladdin et de Jafar (il est capable d'interpréter les deux personnages tout en donnant l'impression qu'il s'agit de deux personnes complètement différentes). Il a parfaitement maîtrisé ces voix et y a ajouté quelques improvisations et touches personnelles qui ont encore amélioré les répliques.",
+    },
+  },
+  {
+    title: "Voix off – Lecture de lettres dans le cadre d'une exposition",
+    description:
+      "Interprétation de lettres écrite par un biologiste ficitif pour une exposition, avec un ton narratif et immersif, permettant aux visiteurs de se plonger dans le contexte émotionnel des écrits.",
+    media: "https://youtu.be/et5LjXJq7yo",
+    date: new Date(2026, 9, 0),
+    categories: [
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.DOUBLAGE,
+      PORTFOLIO_CATEGORIES.PROJECT_TYPES.VOIXOFF,
+      PORTFOLIO_CATEGORIES.VOCAL_STYLES.JOUE,
+    ],
+    customer: {
+      name: "kooseko",
+      comment: "A mis beaucoup de cœur et de créativité dans le travail demandé. Une identité sur mesure pour mon projet avec un jeu d’acteur impressionnant. Je recommande chaudement !",
     },
   },
   {
